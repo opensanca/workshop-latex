@@ -1,8 +1,24 @@
 # Workshop de LaTeX
 
-Workshop que será ministrado em X de abril de 2016. Entre no [#latex no Slack
-do opensanca](https://opensanca.slack.com/messages/latex/) para mais
-informações e ajuda.
+O LaTeX (/ˈlɑːtɛx/ ou /ˈlɑːtɛk/) é um processador de textos. Diferentemente do
+Word ou LibreOffice Write, no entanto, o usuário não edita o texto visualmente,
+mas indica por meio de comandos como o texto deve ser formatado. Dessa maneira,
+o LaTeX é uma linguagem de marcação de texto, como o HTML ou Markdown. Ele é
+usado em muitas áreas acadêmicas, especialmente na publicação de teses e
+artigos. Muitas editoras também usam esse programa para formatar seus livros.
+
+O software traz muitas vantagens em relação à editores visuais. Por exemplo, o
+escritor pode focar no texto que escreve, ao invés do tamanho das fontes; os
+arquivos `.tex` são simplesmente arquivos de texto, que não exigem um editor
+específico; por serem arquivos de texto, são extremamente leves e podem ser
+colocados num sistema de versões, como o Git; o resultado final é profissional,
+além de existirem pacotes que automaticamente formatam o texto de acordo com a
+ABNT, por exemplo.
+
+Neste workshop, que será ministrado em X de maio de 2016, discutiremos você
+pode criar seus próprios documentos em LaTeX. Entre no [#latex no Slack do
+opensanca](https://opensanca.slack.com/messages/latex/) para mais informações e
+ajuda.
 
 ## Sumário
 
@@ -12,9 +28,16 @@ informações e ajuda.
 
 ## Conteúdo e objetivo
 
-Levaremos os participantes _from zero to hero,_ cobrindo tópicos que vão desde
-a obtenção do LaTeX, um arquivo de “hello world,” passando por notação
-matemática, BibTeX e ABNTeX2, além de orientações para buscar ajuda.
+Levaremos os participantes do básico de LaTeX, incluindo como instalar uma
+distribuição e como compilar arquivos, até tópicos mais complexos, como notação
+técnica, pacotes populares que trazem extensões úteis, o gerenciador de
+referências bibliográficas BibTeX e o uso do pacote ABNTeX2, usado para
+formatar teses e artigos científicos de acordo com as normas da ABNT.
+
+O público-alvo são completos iniciantes ou pessoas que ainda se sentem
+desconfortáveis para usar o LaTeX. Usuários intermediários ou avançados também
+são bem-vindos e poderão, inclusive, dar suporte aos participantes com
+dificuldades.
 
 ## Como obter o LaTeX
 
