@@ -23,9 +23,9 @@ Veja o [guia-instalao.md](guia-instalacao.md).
 - [Wikibook: LaTeX](https://en.wikibooks.org/wiki/LaTeX) — wikibook bastante
   completo para iniciantes e para consulta.
 - [TeX Q&A no StackExchange](https://tex.stackexchange.com/) — uma das melhores
-  comunidades para perguntas e respostas
+  comunidades para perguntas e respostas.
 - [LaTeX Community](http://www.latex-community.org/forum/) — forum para
-  usuários de LaTeX
+  usuários de LaTeX.
 - [/r/LaTeX](https://www.reddit.com/r/latex) — comunidade no Reddit para
   usuários de LaTeX. Confiram o [post para usuário
   inciantes](https://www.reddit.com/r/LaTeX/comments/j2326/getting_started_with_LaTeX).
