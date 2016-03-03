@@ -81,3 +81,11 @@ a experiência durante o curso. Você pode se cadastrar no serviço em
 [overleaf.com/signup](https://www.overleaf.com/signup). Também temos um código
 de referral para começar com 100mb a mais em
 [overleaf.com/signup?ref=348ee7dc367e](https://www.overleaf.com/signup?ref=348ee7dc367e).
+
+## Testando a instalação
+
+Compile o arquivo [hello-world.tex](hello-world.tex) usando o método de sua
+escolha. Em caso de dúvidas, consulte [nosso canal no Slack do
+opensanca](https://opensanca.slack.com/archives/latex).
+
+TODO: dar instruções completas de como compilar arquivos.
