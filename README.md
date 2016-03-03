@@ -1,6 +1,10 @@
 # Workshop de LaTeX
 
+<<<<<<< HEAD
 Workshop que será ministrado em X de abril de 2016. Entre no [#latex no Slack
+=======
+Workshop que será ministrado em X de abril de 2016. Entre no [#linux no Slack
+>>>>>>> c2fda3283c1f37b3c6e7feadf631bdd16ee318d2
 do opensanca](https://opensanca.slack.com/messages/latex/) para mais
 informações e ajuda.
 
@@ -39,7 +43,11 @@ mais informações.
 - [/r/LaTeX](https://www.reddit.com/r/latex) — comunidade no Reddit para
   usuários de LaTeX. Confiram o [post para usuário
   inciantes](https://www.reddit.com/r/LaTeX/comments/j2326/getting_started_with_LaTeX).
+<<<<<<< HEAD
 - [#latex no Slack do opensanca](https://opensanca.slack.com/messages/latex/) —
+=======
+- [#linux no Slack do opensanca](https://opensanca.slack.com/messages/latex/) —
+>>>>>>> c2fda3283c1f37b3c6e7feadf631bdd16ee318d2
   criamos um canal no Slack do opensanca para discutir esse workshop, dar
   suporte e discutir LaTeX em geral.
 - [Detexify](http://detexify.kirelabs.org/classify.html) — guia visual para
