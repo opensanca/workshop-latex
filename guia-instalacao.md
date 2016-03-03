@@ -9,7 +9,7 @@ para cada plataforma.
 
 ## Sumário
 
-- [GNU/Linux](#gnu/linux)
+- [GNU/Linux](#gnulinux)
   - [Ubuntu e Debian](#ubuntu-e-debian)
   - [Fedora](#fedora)
   - [Arch](#arch)
@@ -26,19 +26,19 @@ pacotes mais completos.
 
 ### Ubuntu e Debian
 
-  sudo apt-get install texlive-full
+    sudo apt-get install texlive-full
 
 ### Fedora
 
-  sudo dnf install texlive-scheme-full
+    sudo dnf install texlive-scheme-full
 
 ### Arch
 
-  sudo pacman -S texlive-most
+    sudo pacman -S texlive-most
 
 ### Gentoo
 
-  sudo emerge --ask texlive
+    sudo emerge --ask texlive
 
 ### IDEs
 
