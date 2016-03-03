@@ -18,6 +18,7 @@ para cada plataforma.
 - [Windows](#windows)
 - [OS X](#os-x)
 - [Editores web](#editores-web)
+- [Testando a instalação](#testando-a-instalacao)
 
 ## GNU/Linux
 
