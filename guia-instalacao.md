@@ -23,7 +23,11 @@ para cada plataforma.
 ## GNU/Linux
 
 No GNU/Linux, você deve instalar o TeX Live. Os comandos baixo instalam os
-pacotes mais completos.
+pacotes mais completos, isto é, que contém o maior número de pacotes
+(extensões) incluídas no TeX Live. Selecionamos as distribuições mais
+populares. Caso sua distribuição não esteja nesta lista, consulte seu manual ou
+wiki, ou entre em contato com nosso canal no Slack:
+[#latex](https://opensanca.slack.com/archives/latex).
 
 ### Ubuntu e Debian
 
