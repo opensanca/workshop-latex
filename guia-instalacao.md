@@ -59,12 +59,19 @@ Para computadores rodando Windows, a distribuição mais popular é o
 mais informações, veja o [manual do projeto](http://docs.miktex.org/manual/)
 (em inglês).
 
+Confira esse [tutorial de instalação do
+MiKTeX](https://www.youtube.com/watch?v=FNf9aAeDhB4) no YouTube.
+
 ## OS X
 
 Para OS X, o TUG (Tex Users Group) disponibiliza a distribuição
 [MacTeX](https://tug.org/mactex/), que inclui uma série de aplicativos GUI como
 o IDE TeXshop. Para mais ajuda, veja [esta
 seção](https://www.tug.org/mactex/gettinghelp.html) no site do MacTeX.
+
+O usuário Malte Helmhold criou um [tutorial no
+YouTube](https://www.youtube.com/watch?v=WvGQ2Mrhf7g) ensinando a instalar o
+MacTeX.
 
 ## Editores web
 
