@@ -96,8 +96,8 @@ de referral para começar com 100mb a mais em
 
 ## Testando a instalação
 
-Compile o arquivo [hello-world.tex](hello-world.tex) usando o método de sua
-escolha. Em caso de dúvidas, consulte [nosso canal no Slack do
-opensanca](https://opensanca.slack.com/archives/latex).
+Compile o arquivo [exercicios/hello-world.tex](exercicios/hello-world.tex)
+usando o método de sua escolha. Em caso de dúvidas, consulte [nosso canal no
+Slack do opensanca](https://opensanca.slack.com/archives/latex).
 
 TODO: dar instruções completas de como compilar arquivos.
