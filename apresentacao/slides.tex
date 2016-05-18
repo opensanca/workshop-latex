@@ -1,0 +1,193 @@
+\documentclass[final]{beamer}
+\usepackage{hyperref,xspace,graphicx,microtype,minted}
+\usepackage[brazil]{babel}
+
+\usetheme[sectionpage=simple,numbering=none]{metropolis}
+\beamertemplatenavigationsymbolsempty
+
+\newcommand{\filename}[1]{\texttt{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title{Olá, \LaTeX!}
+\author{Rafael Beraldo}
+\date{28 de maio de 2016}
+
+\begin{document}
+\maketitle
+
+\begin{frame}[standout]
+  \Huge História e filosofia vão aqui
+\end{frame}
+
+% Considerações iniciais
+\begin{frame}
+  \only<1>{\Huge\LaTeX{} é uma linguagem de marcação de texto}
+  \only<2>{\Huge Você \emph{declara} o documento}
+  \only<3>{\Huge É como um tipógrafo profissional à sua disposição}
+  \only<4>{\Huge Comandos são semânticos}
+\end{frame}
+
+% Sintaxe dos comandos
+\begin{frame}[fragile]
+  \begin{minted}[autogobble,fontsize=\huge,breaklines]{latex}
+    \section{Introdução}
+  \end{minted}
+\end{frame}
+
+% Exercício: hello-world.tex %%%%%%%%%%%%%
+\begin{frame}[standout]
+  \huge
+  Exercício: \filename{hello-world.tex}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\filename{hello-world.tex}}
+  \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+    \documentclass{article}
+    \begin{document}
+      Hello, world!
+    \end{document}
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\filename{hello-world.tex}}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{bash}
+    lualatex hello-world.tex
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\filename{hello-world.tex}}
+  \begin{minted}[autogobble,breaklines]{bash}
+    % hello-world.tex
+    %
+    % Rafael Beraldo <rberaldo@cabaladada.org>
+    % Workshop de LaTeX do Opensanca
+    % 28 de maio de 2016
+  \end{minted}
+\end{frame}
+
+% Exercício: espaco-branco.tex %%%%%%%%%%%%%%
+% No exercício, temos dois parágrafos do Guia do Mochileiro das Galáxias.
+\begin{frame}[standout]
+  \huge
+  Exercício: \filename{espaco-branco.tex}
+\end{frame}
+
+% Ensinar que, para criar uma nova linha, usamos estes comandos.
+\begin{frame}[fragile]
+  \frametitle{\filename{espaco-branco.tex}}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+    \\newline
+
+    \\
+  \end{minted}
+\end{frame}
+
+% Mostrar a extensão dos exercícios; pedir que o resolvam. Mostrar como os
+% comentários contém as instruções.
+\begin{frame}
+  \frametitle{\filename{espaco-branco-exercicio.tex}}
+  \LARGE
+  Vamos resolver \filename{espaco-branco-exercicio.tex}
+\end{frame}
+
+% Exercício: poliglota-exercicio.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \huge
+  Exercício: \filename{poliglota-exercicio.tex}
+\end{frame}
+
+% No exemplo anterior, espaco-branco.tex, os acentos --- na verdade,
+% diacríticos --- não apareceram. Alguém saberia o motivo?
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \LARGE
+  Acentos não apareciam em \filename{espaco-branco.tex}
+\end{frame}
+
+% Para resolver, teremos que usar pacotes
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Solução: pacotes
+\end{frame}
+
+% Para carregar pacotes, usamos esta sintaxe
+\begin{frame}[fragile]
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+    \usepackage[opções]{pacote}
+  \end{minted}
+\end{frame}
+
+% Para resolvermos a falta de diacríticos, usaremos o pacote polyglossia
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Pacote \code{polyglossia}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  O \code{polyglossia} traz benefícios como:
+  \begin{itemize}
+    \only<1>{\item Hifenização}
+    \only<2>{\item Strings como \code{\textbackslash today}}
+    \only<3>{\item Convenções tipográficas localizadas}
+  \end{itemize}
+\end{frame}
+
+% Vamos ao exercício.
+%
+% Sabemos para que serve o polyglossia. Perguntar como ele seria implementado,
+% e onde seria colocado no código.
+%
+% Também estudar a sintaxe para selecionar línguas. Explicar o motivo pelo qual
+% a opção de pacote [brazil] não é mais usada: fica difícil selecionar várias
+% línguas e suas opções.
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Como carregar o pacote \code{polyglossia}?
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+    \usepackage{polyglossia}
+    \setdefaultlanguage{brazil}
+  \end{minted}
+\end{frame}
+
+% Para encontrar ajuda, podemos ler a documentação oficial dos pacotes que
+% estamos usando. Mostrar outras opções do polyglossia, por exemplo.
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Comprehensive \TeX{} Archive Network
+
+  \url{ctan.org}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \huge
+  \url{https://www.ctan.org/pkg/polyglossia}
+\end{frame}
+
+% Exercício: artigo-exercicio.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \huge
+  Exercício: \filename{artigo-exercicio.tex}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{artigo-exercicio.tex}}
+  \Huge
+  Exemplo de arquivo comum em \LaTeX: \filename{artigo-exemplo.tex}
+\end{frame}
+
+\end{document}
