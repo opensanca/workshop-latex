@@ -62,7 +62,7 @@ TODO: adicionar mais informações sobre classes e suas opções, como `a4paper`
 `11pt`;
 
 Perguntar, aliás, o que são aquelas linhas que começam com `%` no topo do
-arquivo, e por que não são imprimidas no documento final?
+arquivo, e por que não são impressas no documento final?
 
 *Exercício* compilar o arquivo hello-world.tex com sucesso.
 
@@ -124,14 +124,82 @@ os pacotes. Mostrar a documentação do `polyglossia` como exemplo.
 
 ### artigo-exercicio.tex
 
-- artigo.tex mostra a organização de um arquivo LaTeX típico.
-- opções de documentclass
-- mais exemplos de pacotes
-- page styles
-- common filetypes
+Agora, vamos olhar para um documento um pouco mais complexo, mas também mais
+típico. `artigo-exemplo.tex` demonstra alguns conceitos interessantes em LaTeX.
+Vamos começar pela organização de um aquivo `.tex`. Basicamente, ele é dividido
+em um *preâmbulo* no qual estão os pacotes e opções que utilizaremos e o
+*documento em si,* que começa a partir do comando `\begin{document}`.
+
+Vamos explorar o preâmbulo para começar. A primeira linha que chama nossa atenção é:
+
+    \documentclass[11pt,a4paper,oneside]{article}
+
+O que são essas palavras entre os dois colchetes? São opções que a classe
+`article` nos fornece por padrão. É bastante útil conhecer quais são as opções
+da classe que você decidiu utilizar. O que a primeira opção, `11pt` deve
+significar? Repetir para todas elas e explicar seus resultados. Aqui estão as
+opções de classe mais comuns:
+
+- `10pt, 11pt, 12pt`
+- `a4paper, letterpaper, ...`
+- `fleqn`: equações são alinhadas à esquerda ao invés de seres centralizadas.
+- `leqno`: a numeração das equações fica à esquerda ao invés da direita.
+- `titlepage, notitlepage`
+- `twocolumn`
+- `twoside, oneside`: arruma as margens para a impressão nos dois lados do
+  papel ou apenas um.
+- `landscape`: o documento é impresso em formato paisagem.
+- `openright, openany`: não funciona com a classe `article`, pois ela não
+  fornece o comando `chapter`.
+- `draft`: indica problemas de hifenização e justificação imprimindo um pequeno
+  quadrado na margem direita. Também suprime a colocação das imagens, colocando
+  um quadro em branco em seu lugar. O tempo de compilação é bem menor.
+
+Compilar o mesmo documento com várias opções diferentes e mostrar os
+resultados.
+
+Após o `\documentclass`, três pacotes são carregados: `polyglossia, blindtext`
+e `hyperref`. Olhando o código-fonte, o que os dois últimos pacotes devem
+fazer? Mudar o conteúdo do comando `\author` para o seguinte:
+
+    \author{Rafael Beraldo \\
+    \href{mailto:rberaldo@cabaladada.org}{\textless rberaldo@cabaladada.org \textgreater}
+
+O que será impresso agora?
+
+Agora, vamos adicionar o pacote `microtype` e ver quais diferenças encontramos.
+Explicar que o `microtype` mexe nos espaços entre as palavras, lida com a
+protusão de caracteres perto da margem direita, bem como cuida da expansão de
+fontes.
+
+Mostrar [o manual do
+`microtype`](http://mirrors.ctan.org/macros/latex/contrib/microtype/microtype.pdf),
+que tem exemplos de suas funcionalidades.
+
+No corpo do documento, entre `\begin{document}` e `\end{document}` existem
+vários comandos interessantes. Discutir o significado de `\frenchspacing` e
+ensinar também o comando `\subsection`.
+
+Compilar o arquivo e mostrar a quantidade de arquivos que foram produzidos. A
+quantidade de arquivos produzidos é sempre muito grande, mas a maior parte pode
+ser deletada sem problemas.
+
+Compiladores LaTeX passam apenas uma vez pelo documento, produzindo o PDF
+durante a compilação. Mas eles não pulam por todo o código, portanto certas
+operações introduzem outros arquivos que guardam informações que serão usadas
+mais tarde. Aqui vai uma lista de arquivos auxiliares:
+https://en.wikibooks.org/wiki/LaTeX/Basics#Ancillary_files
+
+Para evitar que tantos arquivos sejam mantidos, podemos utilizar o comando
+`latexmk -c`. 
+
+*Exercício*: transformar o arquivo `artigo-exercicio.tex` em um arquivo LaTeX e
+compilá-lo. Mostrar o arquivo resolvido na tela de discutir, primeiro, como
+implementá-lo com a plateia.
 
 ## ABNT
 ## Referências
 
-- post no reddit sobre a tipografia do TAoCP antes do TeX:
-  https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/
+- [Post no reddit sobre a tipografia do TAoCP antes do TeX:]
+  (https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
+- [Guia do Wikibooks](https://en.wikibooks.org/wiki/LaTeX)

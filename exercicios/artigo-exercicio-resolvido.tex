@@ -1,28 +1,26 @@
-%
-% artigo-exercicio.tex
-%
-% Rafael Beraldo <rberaldo@cabaladada.org>
-% Workshop de LaTeX do Opensanca
-% 28 de maio de 2016
-% 
-% Problema: este artigo não está no formato correto. Usando seus novos
-% conhecimentos sobre o preâmbulo, pacotes e organização de um arquivo LaTeX,
-% transforme este artigo em um arquivo LaTeX válido e o compile.
-%
+\documentclass[oneside,twocolumn,a4paper]{article}
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+\usepackage{microtype,hyperref}
 
-Título: Iluminações automáticas
-Autor: Gerador de Lero Lero
-Data: 28 de maio de 2016
+\title{Iluminações automáticas}
+\author{Gerador de Lero Lero}
+\date{28 de maio de 2016}
 
-RESUMO
+\begin{document}
+\frenchspacing
 
+\maketitle
+
+\begin{abstract}
 Um artigo gerado automaticamente pelo Fabuloso Gerador de Lero Lero, que nos
 auxilia a lidar com o comprometimento entre as equipes facilita a criação dos
 níveis de motivação departamental. Evidentemente, a percepção das dificuldades
 apresenta tendências no sentido de aprovar a manutenção de alternativas às
 soluções ortodoxas. 
+\end{abstract}
 
-1. Introdução
+\section{Introdução}
 
 Não obstante, a contínua expansão de nossa atividade maximiza as possibilidades
 por conta do investimento em reciclagem técnica. Por outro lado, o consenso
@@ -40,7 +38,7 @@ significado destes problemas, uma vez que o aumento do diálogo entre os
 diferentes setores produtivos causa impacto indireto na reavaliação das novas
 proposições.
 
-2. Mais dados interessantes
+\section{Mais dados interessantes}
 
 Evidentemente, o início da atividade geral de formação de atitudes cumpre um
 papel essencial na formulação do impacto na agilidade decisória. A prática
@@ -51,7 +49,7 @@ ressaltar a relatividade dos níveis de motivação departamental. É claro que 
 hegemonia do ambiente político promove a alavancagem do processo de comunicação
 como um todo.
 
-2.2 Um caso curioso
+\subsection{Um caso curioso}
 
 Pensando mais a longo prazo, a competitividade nas transações comerciais faz
 parte de um processo de gestão das posturas dos órgãos dirigentes com relação
@@ -72,7 +70,7 @@ estabelecimento dos procedimentos normalmente adotados. Caros amigos, o
 desafiador cenário globalizado exige a precisão e a definição dos métodos
 utilizados na avaliação de resultados.
 
-3. Conclusão
+\section{Conclusão}
 
 O cuidado em identificar pontos críticos na necessidade de renovação processual
 é uma das consequências do investimento em reciclagem técnica. Evidentemente, a
@@ -80,6 +78,8 @@ revolução dos costumes talvez venha a ressaltar a relatividade de todos os
 recursos funcionais envolvidos. Pensando mais a longo prazo, a consolidação das
 estruturas estimula a padronização dos modos de operação convencionais. 
 
-Para se iluminar mais, visite o [Fabuloso Gerador de Lero Lero versão
-3](http://lerolero.miguelborges.com/).
+Para se iluminar mais, visite o
+\href{http://lerolero.miguelborges.com/}{Fabuloso Gerador de Lero Lero
+versão~3}.
 
+\end{document}

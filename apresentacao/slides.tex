@@ -1,5 +1,6 @@
-\documentclass[final]{beamer}
-\usepackage{hyperref,xspace,graphicx,microtype,minted}
+\documentclass[draft]{beamer}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+\usepackage{hyperref,xspace,graphicx,microtype,minted,multicol}
 \usepackage[brazil]{babel}
 
 \usetheme[sectionpage=simple,numbering=none]{metropolis}
@@ -59,7 +60,7 @@
 
 \begin{frame}[fragile]
   \frametitle{\filename{hello-world.tex}}
-  \begin{minted}[autogobble,breaklines]{bash}
+  \begin{minted}[autogobble,breaklines]{latex}
     % hello-world.tex
     %
     % Rafael Beraldo <rberaldo@cabaladada.org>
@@ -90,7 +91,7 @@
 \begin{frame}
   \frametitle{\filename{espaco-branco-exercicio.tex}}
   \LARGE
-  Vamos resolver \filename{espaco-branco-exercicio.tex}
+  Resolver \filename{espaco-branco-exercicio.tex}
 \end{frame}
 
 % Exercício: poliglota-exercicio.tex %%%%%%%%%%%%%%
@@ -140,7 +141,7 @@
   \end{itemize}
 \end{frame}
 
-% Vamos ao exercício.
+% Ao exercício.
 %
 % Sabemos para que serve o polyglossia. Perguntar como ele seria implementado,
 % e onde seria colocado no código.
@@ -156,7 +157,7 @@
 
 \begin{frame}[fragile]
   \frametitle{\filename{poliglota-exercicio.tex}}
-  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+  \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
     \usepackage{polyglossia}
     \setdefaultlanguage{brazil}
   \end{minted}
@@ -184,10 +185,173 @@
   Exercício: \filename{artigo-exercicio.tex}
 \end{frame}
 
+% Dar uma olhada no arquivo. Ensinar a distinção entre o preâmbulo e o corpo do
+% documento.
 \begin{frame}
   \frametitle{\filename{artigo-exercicio.tex}}
-  \Huge
+  \LARGE
   Exemplo de arquivo comum em \LaTeX: \filename{artigo-exemplo.tex}
+\end{frame}
+
+% Explicar as opções da classe article que escolhi
+\begin{frame}[fragile]
+  \frametitle{\filename{artigo-exercicio.tex}}
+  \LARGE
+  Classes comuns:
+  \begin{multicols}{2}
+    \begin{itemize}
+      \only<1>{\item \code{article}}
+      \only<1>{\item \code{report}}
+      \only<1>{\item \code{book}}
+      \only<1>{\item \code{letter}}
+      \only<1>{\item \code{memoir}}
+      \only<1>{\item \code{beamer}}
+  \end{itemize}
+\end{multicols}
+\end{frame}
+
+% Vejamos quais são as opções de classe mais comuns
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \LARGE
+  Opções de classe comuns:
+  \begin{itemize}
+    \only<1>{\item \code{10pt, 11pt, 12pt}}
+    \only<1>{\item \code{a4paper, a5paper, letterpaper, …}}
+    \only<1>{\item \code{fleqn}}
+    \only<2>{\item \code{leqno}}
+    \only<2>{\item \code{titlepage, notitlepage}}
+    \only<2>{\item \code{twocolumn}}
+    \only<2>{\item \code{twoside, oneside}}
+    \only<3>{\item \code{landscape}}
+    \only<3>{\item \code{openright, openany}}
+    \only<3>{\item \code{draft}}
+  \end{itemize}
+\end{frame}
+
+% Compilar o documento várias vezes, com opções diferentes
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \huge
+  Vamos testar algumas opções?
+\end{frame}
+
+% Olharemos agora os pacotes carregados
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \huge
+  Pacotes: \code{polyglossia, blindtext} e \code{hyperref}
+\end{frame}
+
+% Mudar o comando author para o seguinte
+\begin{frame}[fragile]
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \LARGE
+  Colocar um email abaixo dessa linha:
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+   \author{Rafael Beraldo}
+  \end{minted}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Adicionar o pacote \code{microtype}
+\end{frame}
+
+% Mostrar as diferenças entre usar ou não a protrusão e extensão de caracteres
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \LARGE
+  Manual do \code{microtype}:\\
+  \url{www.ctan.org/pkg/microtype}
+\end{frame}
+
+% O corpo do documento. O que são esses dois primeiros comandos?
+\begin{frame}[fragile]
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+  \begin{document}
+  \frenchspacing
+  \maketitle
+  …
+  \end{document}
+  \end{minted}
+\end{frame}
+
+% \frenchspacing era utilizado no século 19, mas não mais
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Large
+  Exemplo de \code{\textbackslash frenchspacing}:
+
+  \vspace{1em}
+  \begin{minipage}{.45\textwidth}
+    \nonfrenchspacing
+    “A poesia vogon é, como todos sabem, a terceira pior do Universo. Em segundo
+    lugar vem a poesia dos azgodos de Kria.”
+  \end{minipage}
+  \hspace{.05\textwidth}
+  \begin{minipage}{.45\textwidth}
+    \frenchspacing
+    “A poesia vogon é, como todos sabem, a terceira pior do Universo. Em segundo
+    lugar vem a poesia dos azgodos de Kria.”
+  \end{minipage}
+\end{frame}
+
+% Como organizar seu documento em seções
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Large
+  Comandos para seccionar o documento:
+
+  \begin{itemize}
+    \only<1>{\item \code{\textbackslash part}}
+    \only<1>{\item \code{\textbackslash chapter}} (apenas classes \code{book} e
+    \code{report})
+    \only<1>{\item \code{\textbackslash section}}
+    \only<1>{\item \code{\textbackslash subsection}}
+    \only<1>{\item \code{\textbackslash subsubsection}}
+    \only<1>{\item \code{\textbackslash paragraph}}
+    \only<1>{\item \code{\textbackslash subparagraph}}
+  \end{itemize}
+\end{frame}
+
+% Aquivos auxiliares
+\begin{frame}[fragile]
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Large
+  Arquivos auxiliares:
+
+  \begin{minted}[autogobble,fontsize=\Large,breaklines]{bash}
+    artigo-exemplo.aux
+    artigo-exemplo.log
+    artigo-exemplo.out
+    artigo-exemplo.pdf
+    artigo-exemplo.tex
+  \end{minted}
+\end{frame}
+
+% Para limpar aquivos auxiliares, uma das possibilidades é utilizar o latexmk
+% com a opção -c (clean)
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Para limpar os arquivos auxiliares:
+
+  \code{\$ latexmk -c}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Resolver \filename{poliglota-exercicio.tex}
+\end{frame}
+
+% Exercício: ?.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \huge
+  Exercício: \filename{?.tex}
 \end{frame}
 
 \end{document}
