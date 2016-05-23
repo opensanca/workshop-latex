@@ -71,3 +71,5 @@ mais informações.
   encontrar comandos em LaTeX. Desenhe um símbolo usando o mouse, e o app vai
   buscar símbolos parecidos e seus respectivos commandos.
 - [The Beauty of LaTeX](http://nitens.org/taraborelli/latex) — showcase do poder do LaTeX.
+- [TeXdoc Online](http://texdoc.net/) — encontre documentação facilmente. O
+  site é separado por tópicos.
