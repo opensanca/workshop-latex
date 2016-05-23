@@ -58,13 +58,12 @@ Agora, vamos mudar a classe do nosso documento para `minimal`. O que isso
 significa? Quais classes existem além de `article` e `minimal`? O que acontece
 com `\section` quando eu mudo para a classe `minimal`?
 
-TODO: adicionar mais informações sobre classes e suas opções, como `a4paper` e
-`11pt`;
-
 Perguntar, aliás, o que são aquelas linhas que começam com `%` no topo do
 arquivo, e por que não são impressas no documento final?
 
-*Exercício* compilar o arquivo hello-world.tex com sucesso.
+#### Exercício
+
+Compilar o arquivo hello-world.tex com sucesso.
 
 ### espaco-branco.tex
 
@@ -81,8 +80,10 @@ inteligente.
 Para criar um novo parágrafo, devemos deixar um espaço em branco entre as
 linhas. Novas linhas são ignoradas: para inserir uma linha, `\newline` ou `\\`.
 
-*Exercício:* `espaco-branco-exercicio.tex`. Arrumar o arquivo, deixando os
-espaços e parágrafos corretos. *TODO: exercício em si.*
+#### Exercício 
+
+`espaco-branco-exercicio.tex`. Arrumar o arquivo, deixando os
+espaços e parágrafos corretos.
 
 Notar que nem tudo funcionará perfeitamente. Qual problemas encontramos? Sim,
 os diacríticos não apareceram corretamente. Alguém saberia o motivo?
@@ -116,11 +117,13 @@ Para carregar as configurações para o nosso idioma, devemos usar o comando:
 
     \setdefaultlanguage{brazil}
 
-*Exercício*: adicionar o pacote `polyglossia` abaixo do `\documentclass` e
-compilar o arquivo.
+#### Exercício
 
-Quando o exercício terminar, mostrar o CTAN e como encontrar documentação para
-os pacotes. Mostrar a documentação do `polyglossia` como exemplo.
+Adicionar o pacote `polyglossia` abaixo do `\documentclass` e compilar o
+arquivo.
+
+Quando o exercício terminar, **mostrar o CTAN e como encontrar documentação
+para os pacotes.** Mostrar a documentação do `polyglossia` como exemplo.
 
 ### artigo-exercicio.tex
 
@@ -130,9 +133,21 @@ Vamos começar pela organização de um aquivo `.tex`. Basicamente, ele é divid
 em um *preâmbulo* no qual estão os pacotes e opções que utilizaremos e o
 *documento em si,* que começa a partir do comando `\begin{document}`.
 
+#### Preâmbulo: classes e suas opções
+
 Vamos explorar o preâmbulo para começar. A primeira linha que chama nossa atenção é:
 
     \documentclass[11pt,a4paper,oneside]{article}
+
+Anteriormente discutimos duas classes LaTeX: `article` e `minimal`. Mas existem
+muitas outras classes. Por exemplo:
+
+- `article`: para escrever artigos
+- `report`: para escrever relatórios
+- `book`: para livros
+- `letter`: para redigir letras
+- `memoir`: baseada na classe book, traz vários comandos úteis
+- `beamer`: para apresentações de slide
 
 O que são essas palavras entre os dois colchetes? São opções que a classe
 `article` nos fornece por padrão. É bastante útil conhecer quais são as opções
@@ -155,12 +170,14 @@ opções de classe mais comuns:
   quadrado na margem direita. Também suprime a colocação das imagens, colocando
   um quadro em branco em seu lugar. O tempo de compilação é bem menor.
 
-Compilar o mesmo documento com várias opções diferentes e mostrar os
-resultados.
+**Compilar o mesmo documento com várias opções diferentes e mostrar os
+resultados.**
+
+#### Preâmbulo: pacotes e comandos para o título
 
 Após o `\documentclass`, três pacotes são carregados: `polyglossia, blindtext`
 e `hyperref`. Olhando o código-fonte, o que os dois últimos pacotes devem
-fazer? Mudar o conteúdo do comando `\author` para o seguinte:
+fazer? **Mudar o conteúdo do comando `\author` para o seguinte:**
 
     \author{Rafael Beraldo \\
     \href{mailto:rberaldo@cabaladada.org}{\textless rberaldo@cabaladada.org \textgreater}
@@ -172,17 +189,21 @@ Explicar que o `microtype` mexe nos espaços entre as palavras, lida com a
 protusão de caracteres perto da margem direita, bem como cuida da expansão de
 fontes.
 
-Mostrar [o manual do
+**Mostrar [o manual do
 `microtype`](http://mirrors.ctan.org/macros/latex/contrib/microtype/microtype.pdf),
-que tem exemplos de suas funcionalidades.
+que tem exemplos de suas funcionalidades.**
+
+#### O documento em si
 
 No corpo do documento, entre `\begin{document}` e `\end{document}` existem
-vários comandos interessantes. Discutir o significado de `\frenchspacing` e
-ensinar também o comando `\subsection`.
+vários comandos interessantes. **Discutir o significado de `\frenchspacing` e
+ensinar também o comando `\subsection`.**
 
-Compilar o arquivo e mostrar a quantidade de arquivos que foram produzidos. A
-quantidade de arquivos produzidos é sempre muito grande, mas a maior parte pode
-ser deletada sem problemas.
+#### Compilação e arquivos auxiliares
+
+**Compilar o arquivo e mostrar a quantidade de arquivos que foram produzidos.**
+A quantidade de arquivos produzidos é sempre muito grande, mas a maior parte
+pode ser deletada sem problemas.
 
 Compiladores LaTeX passam apenas uma vez pelo documento, produzindo o PDF
 durante a compilação. Mas eles não pulam por todo o código, portanto certas
@@ -193,11 +214,18 @@ https://en.wikibooks.org/wiki/LaTeX/Basics#Ancillary_files
 Para evitar que tantos arquivos sejam mantidos, podemos utilizar o comando
 `latexmk -c`. 
 
-*Exercício*: transformar o arquivo `artigo-exercicio.tex` em um arquivo LaTeX e
-compilá-lo. Mostrar o arquivo resolvido na tela de discutir, primeiro, como
-implementá-lo com a plateia.
+#### Exercício
 
-## ABNT
+Transformar o arquivo `artigo-exercicio.tex` em um arquivo LaTeX e compilá-lo.
+Mostrar o arquivo resolvido na tela de discutir, primeiro, como implementá-lo
+com a plateia.
+
+### ?.tex
+
+## ABNTeX2
+
+TODO: Ensinar como usar o pacote ABNTeX2.
+
 ## Referências
 
 - [Post no reddit sobre a tipografia do TAoCP antes do TeX:]
