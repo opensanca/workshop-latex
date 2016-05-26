@@ -220,7 +220,191 @@ Transformar o arquivo `artigo-exercicio.tex` em um arquivo LaTeX e compilá-lo.
 Mostrar o arquivo resolvido na tela de discutir, primeiro, como implementá-lo
 com a plateia.
 
-### ?.tex
+### fontes.tex
+
+Originalmente, o TeX foi projetado para utilizar o sistema MetaFont, também
+projetado pelo Prof. Donald Knuth. Os sistemas mais populares atualmente são,
+porém, o Truetype `(ttf)` e OpenType `(otf)`. Antes de aprender a trabalhar com
+fontes, seus estilos e tamanhos, gostaria de contar rapidamente a história das
+fontes no TeX.
+
+#### Fontes e codificação no início do TeX
+
+![A tabela ASCII](images/ascii-chart.png "A tabela ASCII")
+
+Mesmo para o olhar leigo, a tabela ASCII deve parecer terrivelmente incompleta.
+Dos 128 caracteres possíveis (2^7), apenas 95 são imprimíveis, e não há uma
+letra sequer que seja acentuada. Quando o Prof. Donald Knuth criou a primeira
+codificação das fontes do TeX, conhecida como `OT1` (Old Text 1), ela também
+contava com apenas 7 bits, com a maioria dos caracteres advindos da tabela
+ASCII. Naquela época, se o usuário desejasse inserir uma palavra com acentos,
+era necessário escrever o seguinte:
+
+    Eur\'{i}pides
+
+O TeX sobrepunha os acentos às letras, conseguindo um resultado visualmente
+perfeito. Essa técnica ainda é usada por usuários de LaTeX para quem os
+caracteres inclusos na ASCII são suficientes. Ela não vem sem seus problemas,
+como:
+
+- Palavras acentuadas não são hifenizadas.
+- Não é possível buscar palavras acentuadas no output — muito menos
+  copiá-las.
+- Não é possível representar outros sistemas de escrita — como o alfabeto
+  cirílico, o sistema de escrita árabe, caracteres chineses etc.
+
+Em 1990, no Encontro Anual Geral do TUG (TeX User Group) em Cork, Irlanda, um
+grupo de usuários especificou uma codificação com 256 glifos que cobriam a
+maior parte das línguas do Oeste da Europa, bem como algumas línguas do Leste.
+Essa codificação ficou conhecida como `T1`.
+
+Quando comecei a aprender LaTeX, a recomendação era utilizar os seguintes
+pacotes no preâmbulo para escrever textos em português:
+
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+
+Felizmente, hoje existe uma solução mais simples e abrangente.
+
+#### UTF-8, UTF-16, UTF-32, Unicode, WTF?
+
+O Unicode é um padrão que começou no fim da década de 1980 e hoje tem mais de
+120 000 caracteres. O objetivo é codificar a maior parte dos sistemas de
+escrita do mundo, bem como outros símbolos.
+
+O Unicode é, no fundo, uma tabela que dá endereços aos caracteres. O trabalho
+fica, geralmente, para o UTF-8 — que pode usar até 4 bytes para representar
+qualquer caractere Unicode, e é mais comumente usado porque é compatível com a
+tabela ASCII. Outras codificações, como o UTF-16 (que divide o espaço do
+Unicode em duas sequências de 16 bits) ou o UTF-32.
+
+O pacote sobre o qual aprendemos mais no começo deste workshop, `polyglossia`,
+carrega um outro pacote chamado `fontspec`, sobre o qual falaremos agora. Por
+motivos de clareza, incluiremos uma chamada a esse pacote a partir de agora em
+nosso código. Antes de revelarmos a mágica, aprenderemos um pouco sobre a
+história de como chegamos a ele.
+
+Para carregar o pacote `fontspec`, basta adicionar o comando
+`\usepackage{fontspec}` ao preâmbulo do documento. A codificação utilizada,
+automaticamente, é a `TU`: TeX Unicode. Aprenderemos mais sobre esse pacote no
+decorrer desse exercício.
+
+#### Itálicos, negritos e outros tipos
+
+Fontes geralmente vêm em famílias que contém diversos tipos: romanas maiúsculas
+e minúsculas, itálicos, negritos e versaletes, além dos algorismos de título e
+texto. A fonte usada por padrão no LaTeX, chamada de Computer Modern e
+projetada pelo próprio Knuth, é bastante completa nesse respeito. Para acessar
+esses tipos, temos os comandos a seguir à nossa disposição.
+
+- `\emph{}`: itálico quando em texto romano, romando quando em texto itálico
+- `\textbf{}`: negrito
+- `\textsc{}`: versaletes (em inglês: *small caps*)
+- `\texttt{}`: fonte de teletipo
+
+#### Tamanhos
+
+Assim como diferentes tipos carregam diferentes significados, os tamanhos das
+fontes também devem revelar alguma intenção semântica. Os tamanhos também devem
+ter alguma relação entre si: uma escala.
+
+O LaTeX leva essas questões em consideração automaticamente quando usamos
+comandos como `\section`, por exemplo. Nós também podemos acessar esses
+tamanhos utilizando os seguintes comandos:
+
+- `\tiny`: 5pt
+- `\scriptsize`: 7pt
+- `\footnotesize`: 8pt
+- `\small`: 9pt
+- `\normalsize`: 10pt
+- `\large`: 12pt
+- `\Large`: 14pt
+- `\LARGE`: 17pt
+- `\huge`: 20pt
+- `\Huge`: 25pt
+
+Tenha em mente que os valores acima valem apenas para as classes quem vem por
+padrão no LaTeX e quando o valor de `normalsize` é igual a 10pt. Outras classes
+podem trazer outros valores, de acordo com a decisão de seu designer. Além
+disso, é importante dizer que o tamanho do ponto no TeX é diferente do tamanho
+usado atualmente pela maior parte dos programas. Quando Knuth projetou o
+sistema, a editoração digital não era comum e muito menos acessível. Durante a
+infância em Milwaukee, Wisconsin, seu pai era dono de uma editora. Assim, Knuth
+cresceu dentro da tradição anglo-saxã de tipografia, que define um ponto como
+0.35145980 mm. No entanto, com o advento do PostScript da Adobe, o ponto foi
+redefinido para 0.3527 mm (1/72 in).
+
+#### Selecionar fontes diferentes
+
+Uma das maiores vantagens de utilizar o `fontspec` é o comando de seleção de
+fontes. Antigamente, era necessário carregar um pacote que implementasse a
+fonte desejada em MetaFont. Hoje, é possível usar arquivos `ttf` e `otf`.
+
+Para selecionar uma fonte instalada no sistema nos diretórios padrões, basta
+usar o comando: 
+
+    \setmainfont{Linux Libertine}
+
+Caso você esteja trabalhando com um dos editores online de LaTeX, é possível
+fazer o upload das fontes para o serviço e especificar o caminho. Por exemplo:
+
+    \setmainfont{Linux Libertine}[
+      Path = fonts/
+    ]
+
+**Mostrar setmainfont em ação; mostrar ligaduras nos slides.**
+
+#### Exercício
+
+**TODO!** Ideias:
+
+- Mudar o estilo de fontes
+- Usar old style
+- Tamanhos
+
+### layouts-pagina.tex
+
+Usando a solução do exercício anterior, vamos mudar a opção de classe
+`twocolumn` para `onecolumn` e visualizar o efeito dessa mudança no layout da
+página. Também carregaremos o pacote `showframe`. **Mostrar como as margens são
+muito maiores.** Parece uma perda de papel — e é — mas existe um motivo por
+trás de margens são grandes: quando lemos uma linha longa demais, perdemos a
+noção de onde ela havia começado. O tamanho de linha ideal fica por volta de 66
+caracteres, incluindo espaços. É por isso que jornais são divididos em tantas
+colunas. Para resolver esse problema das margens, existem algumas soluções:
+
+- Dividir o texto em duas colunas (melhor solução)
+- Carregar o pacote `fullpage`
+- Carregar o pacote `fullpage` com espaçamento grande entre as linhas (como
+  exige a ABNT).
+
+Para arrumar o espaçamento entre as linhas, devemos utilizar o pacote
+`setspace`. Ele vem com os seguintes comandos:
+
+- `\singlespacing`
+- `\onehalfspacing`
+- `\doublespacing`
+
+Quando você utilizar o comando `\onehalfspacing`, por exemplo, o documento
+seguirá esse espaçamento até que outro espaçamento seja especificado.
+
+Outro fator que influencia o layout da página é seu estilo. O LaTeX vem com
+dois comandos, `\pagestyle{}` e `\thispagestyle{}`, que aceitam os seguintes
+argumentos:
+
+- `empty`: sem texto no cabeçalho e no rodapé
+- `plain`: cabeçalho limpo, mas o número da página aparece centralizado no
+  rodapé
+- `headings`: rodapé limpo, informações como o nome da seção e número da página
+  aparecem no cabeçalho
+
+Existem outras opções e comandos que nos permitem customizar o conteúdo do
+cabeçalho e do rodapé, mas não trataremos deles nesse workshop.
+
+### Exercício
+
+TODO: página em modo paisagem com duas colunas de texto e outras coisas que
+conseguir juntar nessa seção.
 
 ## ABNTeX2
 
@@ -228,6 +412,8 @@ TODO: Ensinar como usar o pacote ABNTeX2.
 
 ## Referências
 
-- [Post no reddit sobre a tipografia do TAoCP antes do TeX:]
+- [Post no reddit sobre a tipografia do TAoCP antes do TeX]
   (https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
 - [Guia do Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
+- [História da codificação de
+  fontes](ftp://ftp.dante.de/tex-archive/macros/latex/doc/encguide.pdf)

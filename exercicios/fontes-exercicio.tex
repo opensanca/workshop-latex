@@ -1,0 +1,83 @@
+%
+% fontes-exercicio.tex
+%
+% Rafael Beraldo <rberaldo@cabaladada.org>
+% Workshop de LaTeX do Opensanca
+% 28 de maio de 2016
+% 
+% Problema: finalmente, você conseguiu o emprego de seus sonhos e trabalhará
+% numa editora como tipógrafo, usando nada menos que LaTeX! Prove suas
+% habilidades, editando o texto abaixo de acordo com as seguintes convenções:
+%
+% - Os nomes dos personagens devem ser tipografados em versaletes (small caps).
+%   Além disso, devem ser seguidos de uma nova linha, para que fiquem acima da
+%   fala do personagem. O nome do personagem e sua fala NÃO devem ser separados
+%   por um novo parágrafo.
+% - As ambientações devem estar em negrito.
+% - Instruções de entrada e saída dos personagens devem estar em itálico.
+% - Os títulos dos atos devem ser escritos com o tamanho \huge, e o tamanho dos
+%   títulos das cenas deve ser \Large.
+%
+% (O texto abaixo foi encontrado em http://www.ebooksbrasil.org/eLibris/sonhoverao.html)
+%
+
+\documentclass[a4paper,twoside]{memoir}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+\usepackage{microtype}
+
+\title{Sonho de uma Noite de Verão}
+\author{William Shakespeare}
+\date{Primeira performance: 1605}
+
+\begin{document}
+\frenchspacing
+
+\maketitle
+
+ATO I
+Cena I
+
+Atenas. O palácio de Teseu. Entram Teseu, Hipólita, Filóstrato e pessoas do
+séquito.
+
+TESEU: Depressa, bela Hipólita, aproxima-se a hora de nossas núpcias. Quatro
+dias felizes nos trarão uma outra lua. Mas, para mim, como esta lua velha se
+extingue lentamente! Ela retarda meus anelos, tal como o faz madrasta ou viúva
+que retém os bens do herdeiro.
+
+HIPÓLITA: Mergulharão depressa quatro dias na negra noite; quatro noites,
+presto, farão escoar o tempo como em sonhos. E então a lua que, como arco
+argênteo. no céu ora se encurva, verá a noite solene do esposório.
+
+TESEU: Vai, Filóstrato, concita os atenienses para a festa, desperta o alegre
+e buliçoso espírito da alegria, despacha para os ritos fúnebres a tristeza, que
+essa pálida hóspede não vai bem em nossas pompas. (Sai Filóstrato.) De espada
+em mão te fiz a corte, Hipólita; o coração te conquistei à custa de violência;
+mas quero desposar-te com música de tom mais auspicioso, com pompas, com
+triunfos, com festejos.
+
+(Entram Egeu, Hérmia, Lisandro e Demétrio.)
+
+EGEU: Salve, Teseu, nosso famoso duque!
+
+TESEU: Bom Egeu, obrigado. Que há de novo?
+
+EGEU: Cheio de dor, venho fazer-te queixa de minha própria filha, Hérmia
+querida. Vem para cá, Demétrio. Nobre lorde, tem este homem o meu consentimento
+para casar com ela. Agora avança. Lisandro. E este, meu príncipe gracioso, o
+peito de Hérmia traz enfeitiçado. Sim, Lisandro, tu mesmo, com tuas rimas!
+Prendas de amor com ela tu trocaste; sob a sua janela, à luz da lua,
+cantaste-lhe canções com voz fingida, versos de amor fingido, e cativaste as
+impressões de sua fantasia com cachos de cabelo, anéis, brinquedos, ramalhetes,
+docinhos, ninharias, mensageiros de efeito decisivo nas jovens ainda brandas.
+Com astúcia, à minha filha o coração furtaste, mudaste-lhe a filial obediência
+em dura teimosia. Por tudo isso, meu mui gracioso duque, se ela, agora. Diante
+de Vossa Graça, com Demétrio não quiser se casar, eu me reporto à antiga lei de
+Atenas que confere aos pais direito de dispor dos filhos. É minha filha, posso
+dispor dela. Ou a entregarei para este cavalheiro, ou para a morte, o que, sem
+mais delongas, segundo nossa lei, deve ser feito.
+
+Etc.
+\end{document}
