@@ -474,4 +474,4 @@ TODO: Ensinar como usar o pacote ABNTeX2.
 - [História da codificação de
   fontes](ftp://ftp.dante.de/tex-archive/macros/latex/doc/encguide.pdf)
 - [LaTeX Tutorials: a
-- Primer](https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)
+  Primer](https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)
