@@ -1,4 +1,4 @@
-\documentclass[final]{beamer}
+\documentclass[draft]{beamer}
 \usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo,enumerate}
 \usepackage[brazil]{babel}
 
@@ -1089,6 +1089,67 @@
   \frametitle{\filename{tabelas.tex}}
   \Huge
   Veja o documento \filename{fala.md} para mais ferramentas
+\end{frame}
+
+% figuras.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  \filename{figuras.tex}
+\end{frame}
+
+% Para inserir imagens, precisamos carregar o pacote graphicx
+\begin{frame}
+  \frametitle{\filename{figuras.tex}}
+  \Huge
+  Pacote \code{graphicx}
+\end{frame}
+
+% O pacote graphics nos dá acesso ao comando \includegraphics, que aceita uma
+% série de opções. Não discutiremos todas em nosso workshop, mas as mais úteis
+% são width, height, scale e keepaspectratio.
+\begin{frame}[fragile]
+  \frametitle{\filename{figuras.tex}}
+  \Large
+  \mintinline{latex}{\includegraphics[opções]{imagem}}
+  \vspace{1em}
+
+  Algumas opções:
+  \begin{itemize}
+    \item \code{width} e \code{height}
+    \item \code{scale}
+    \item \code{keepaspectratio} (bool)
+  \end{itemize}
+\end{frame}
+
+% Geralmente, usamos o comando \includegraphics com o ambiente figure, que é
+% bastante parecido com o ambiente table, que acabamos de estudar.
+\begin{frame}[fragile]
+  \frametitle{\filename{figuras.tex}}
+  \Large
+  Ambiente \code{figure}:
+
+    \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+    \begin{figure}[h]
+      \centering
+      \includegraphics{imagem}
+      \caption{Exemplo de imagem}
+      \label{fig:imagem}
+    \end{figure}
+    \end{minted}
+\end{frame}
+
+% Demonstrar os conceitos usando o arquivo figuras.tex.
+\begin{frame}
+  \frametitle{\filename{figuras.tex}}
+  \Huge
+  Estudar \filename{figuras.tex}
+\end{frame}
+
+% Exercício: colocar figuras no questionário que fizemos anteriormente.
+\begin{frame}
+  \frametitle{\filename{figuras.tex}}
+  \Huge
+  Resolver \filename{figuras-exercicio.tex}
 \end{frame}
 
 \end{document}
