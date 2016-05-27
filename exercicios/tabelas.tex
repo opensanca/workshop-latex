@@ -1,0 +1,151 @@
+%
+% tabelas.tex
+%
+% Rafael Beraldo <rberaldo@cabaladada.org>
+% Workshop de LaTeX do Opensanca
+% 28 de maio de 2016
+%
+% Demonstra:
+% - O ambiente tabular
+% - Como implementar tabelas usando mais espaço em branco ao invés de linhas
+% - Como colocar parágrafos dentro de células
+% - O pacote booktabs
+% - Células com várias colunas usando \multicolumn
+% - O pacote longtable
+%
+
+\documentclass[a4paper,oneside]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+\usepackage{microtype}
+
+\begin{document}
+\frenchspacing
+
+\section{Uma tabela básica}
+
+Usando a tabela abaixo, vamos aprender como alinhar texto dentro das células de
+um ambiente \texttt{tabular}, além de aprendermos a utilizar 
+
+\begin{center}
+  \begin{tabular}{l c r}
+    1 & 2 & 3\\
+    4 & 5 & 6\\
+    7 & 8 & 9\\
+  \end{tabular}
+\end{center}
+
+% A seção a seguir foi inspirada no site
+% http://www.thefreshloaf.com/lessons/yourfirstloaf
+\section{Ingredientes básicos para o pão}
+
+Apenas quatro ingredientes são necessários para fazer pão. Vejamos uma receita
+genérica:
+
+% Brincar com as possibilidades aqui
+\begin{center}
+  \begin{tabular}{lr}
+    Ingrediente & Quantidade\\[5pt]
+    Trigo & 3 xíc\\
+    Sal & 2 cc\\
+    Fermento & 2 cc\\
+    Água & 1 $\frac{1}{8}$ xíc
+  \end{tabular}  
+\end{center}
+
+Antes de correr para a cozinha, é fundamental entender para que servem e como
+interagem esses ingredientes.
+
+% Trocar o tamanho do parágrafo
+\begin{center}
+  \begin{tabular}{lp{.6\textwidth}}
+      Ingrediente & Função\\[5pt]
+      Trigo       & A base do pão. Sem trigo, sem pão.\\
+      Sal         & Retarda o fermento e controla o processo de fermentação.
+                      Também adiciona o sabor que todo esperamos do pão.\\
+      Fermento    & É comumente vendido seco e precisa ser ativado com água
+                      morna.  Faz o pão crescer e quanto maior a quantidade,
+                      mais rápido é o crescimento. Fermento demais deixa o pão
+                      com um gosto de cerveja.\\
+      Água        & Dissolve os ingredientes (solvente universal, alguém?) e
+                      ativa o fermento. Ao adicionar mais água, o resultado é
+                      um pão mais pegajoso e com buracos menos regulares. Se
+                      houver muito pouca água, a expansão da massa é restrita e
+                      o resultado é um pão mais firme, seco e duro.
+  \end{tabular}
+\end{center}
+
+Imprima o resumo abaixo e cole na parede da cozinha, para nunca esquecer esses
+princípios básicos:
+
+% É possível induzir quebras de linha explícitas dentro de um parágrafo em uma
+% célula, se ela incluir o comando \raggedright ou \centering. Nesses casos,
+% precisamos usar \tabularnewline para começar uma nova linha.
+%
+% Também introduzir o pacote booktabs, que nos permite usar os comandos
+% \toprule, \midrule and \bottomrule. Discutir como, frequentemente, não são
+% necessários para melhorar a legibilidade.
+\begin{center}
+  \begin{tabular}{lp{.6\textwidth}}
+    Ingrediente & Função\tabularnewline[8pt]
+    Trigo       & Base do pão\tabularnewline[3pt]
+    Sal         & \raggedright Retarda o fermento\\
+                    Controla o processo de fermentação\\
+                    Dá sabor ao pão\tabularnewline[3pt]
+    Fermento    & \raggedright Vendido seco\\
+                    Ativado com água morna\\
+                    Faz o pão crescer\\
+                    Em abundância, o crescimento é mais
+                    rápido\tabularnewline[3pt]
+    Água        & \raggedright Dissolve os ingredientes\\
+                    Ativa o fermento\\
+                    Em abundância, pão mais pegajoso e com buracos menos
+                    regulares\\
+                    Em falta, pão mais firme, duro e seco
+  \end{tabular}
+\end{center}
+
+% Informação encontrada em
+% http://www.space.com/images/i/000/024/511/original/nearest-stars-121218g-02.jpg
+\section{Distâncias cósmicas}
+
+Com uma nave que viaje à velocidade da luz, seriam necessários 4,2 anos para
+chegar à estrela mais próxima. Abaixo, uma lista de destinos para quem dispõe
+de tempo livre.
+
+% Estamos demonstrando dois conceitos aqui: como poderíamos usar um \midrule
+% depois de multicolumn e, é claro, multicolumn. Podemos aproveitar para
+% deixá-la mais longa e aprender o pacote longtable e o comando \endhead.
+\begin{center}
+  \begin{tabular}{lr}
+    \multicolumn{2}{c}{Estrelas na Via Láctea}\\[8pt]
+    Estrela          & Distância (anos-luz)\\[5pt]
+    Proxima Centauri & 4,2\\
+    Rigil Kentaurus  & 4,3\\
+    Alpha Cen B      & 4,3\\
+    Barnard's Star   & 6,0\\
+    Wolf 359         & 7,7\\
+    BD +36 2147      & 8,2\\
+    Luyten 726-8A    & 8,4\\
+    Luyten 726-8B    & 8,4\\
+    Sirius A         & 8,6\\
+    Sirius B         & 8,6\\
+    Ross 154         & 9,4\\
+    Ross 248         & 10,4\\
+    Epsilon Eri      & 10,8\\
+    Ross 128         & 10,9\\
+    61 Cyg A         & 11,1\\
+    61 Cyg B         & 11,1\\
+    Epsilon Ind      & 11,2\\
+    BD +43 44 A      & 11,2\\
+    BD +43 44 B      & 11,2\\
+    Luyten 789-6     & 11,2\\
+    Procyon A        & 11,4\\
+    Procyon B        & 11,4\\
+    BD +59 1915 A    & 11,6\\
+    BD +59 1915 B    & 11,6\\
+    CoD -36 15693    & 11,7
+  \end{tabular}
+\end{center}
+\end{document}

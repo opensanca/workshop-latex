@@ -1,11 +1,11 @@
-# Workshop: Introdução ao LaTeX (working title)
+# Introdução ao LaTeX: sobre ombros de gigantes
 
 - Quem eu sou
 - Conteúdo do curso
 - Público-alvo
 - Objetivos: não é ensinar todos os mínimos detalhes técnicos do LaTeX, mas
-- focar em sua utilização. Ou seja, ao invés de ficar pensando em detalhes
-- primeiro, vamos fazer exercícios! Também vamos aprender muita tipografia
+  focar em sua utilização. Ou seja, ao invés de ficar pensando em detalhes
+  primeiro, vamos fazer exercícios! Também vamos aprender muita tipografia
     nessa aventura.
 
 ## História e filosofia
@@ -513,6 +513,127 @@ pois os parágrafos são indentados.
 
 Nos slides, exemplos de citação e poemas. Não faremos um exercício.
 
+## tabelas.tex
+
+Tabelas podem ser um assunto complicado em LaTeX, mas isso nem sempre precisa
+ser verdade. Para começar, não devemos tentar imitar a abordagem de programas
+WYSIWYG quando o assunto são as tabelas. Vejamos um exemplo:
+
+    \begin{tabular}{lcr}
+    1 & 2 & 3\\
+    4 & 5 & 6\\
+    7 & 8 & 9
+    \end{tabular}
+
+O ambiente `tabular` não deve ser encarado simplesmente como uma maneira de
+fazer tabelas, mas primeiramente de alinhar textos na horizontal e na vertical.
+Sua sintaxe é `\begin{tabular}{alinhamentos}`. Os valores de alinhamento
+básicos são `c` (centro), `l` (esquerda) e `r` (direita). É possível, também,
+especificar linhas verticais com `|` e parágrafos com tamanhos definidos com
+`p{comprimento}` (alinhado ao topo), `m{comprimento}` (alinhado no meio) e
+`b{comprimento}` (alinhado em baixo).
+
+Linhas horizontais podem ser especificadas com `\hline`:
+
+    \begin{tabular}{l|c|r}
+    \hline
+    1 & 2 & 3\\
+    4 & 5 & 6\\
+    7 & 8 & 9\\
+    \hline
+    \end{tabular}
+
+Linhas, sejam elas horizontais ou verticais, devem ser usadas com moderação. O
+objetivo da tabela é passar informação, portanto o texto deve ser o enfoque
+central. É melhor deixar que a informação respire, do que cercá-la. Nas
+palavras do Robert Bringhurst, em _Elementos do Estilo Tipográfico:_
+
+> Assim como o texto, as tabelas ficam canhestras quando abordadas de forma
+> puramente técnica. Boas soluções tipográficas não costumam surgir em resposta
+> a perguntas do tipo “Como posso enfiar essa quantidade de caracteres naquele
+> tanto de espaço?”. (p. 81)
+
+Veremos alguns exemplos de tabelas empregando essas ideias em `tabelas.tex`:
+
+- A sintaxe do ambiente `tabular`
+- Como fazer tabelas que respiram e dão ênfase ao conteúdo
+- Quebras de linhas em tabelas
+- O pacote [`booktabs`](https://www.ctan.org/pkg/booktabs)
+- O comando `\multicolumn`
+- O pacote [`longtable`](https://www.ctan.org/pkg/longtable) e o comando
+  `\endhead`; existem outros comandos que não exploraremos aqui
+
+### Exercício
+
+Resolver `tabelas-exercicio.tex`.
+
+### Flutuando com `table`
+
+Até agora, temos colocado nossas tabelas em meio ao texto usando o ambiente
+`tabular`. É muito comum, no entanto, colocar tabelas em páginas dedicadas,
+para que não atrapalhem o fluxo do texto. O LaTeX é capaz de fazer isso usando
+uma abstração conhecida como *float*.
+
+Em LaTeX, os dois ambiente do tipo float mais comuns são `table` e `figure`:
+
+    \begin{table}[posição]
+      … 
+    \end{table}
+
+As posições possíveis são:
+
+- `h`: aqui (here)
+- `t`: topo da página
+- `b`: base da página
+- `p`: página dedicada a floats
+- `!`: sobrescreva as restrições de float
+
+O padrão é `tbp`.
+
+Nossa primeira tabela poderia ser reescrita desta maneira:
+
+    \begin{table}
+      \centering
+      \begin{tabular}{lcr}
+      1 & 2 & 3\\
+      4 & 5 & 6\\
+      7 & 8 & 9
+      \end{tabular}
+      \caption{Números de 1 a 9}
+      \label{tab:numerosUmNove}
+    \end{table}
+
+Três comandos a notar: `\centering` pode ser usado ao invés do ambiente
+`center`, pois seu escopo estará limitado; `caption{legenda}` pode ser usado
+para adicionar uma legenda à tabela e `\label{referencia}` permite que
+referenciemos a tabela usando `\ref{referencia}`.
+
+### Exercício
+
+`tabelas-questionario-exercicio.tex` é uma tabela por conta dos presentes.
+Vamos entrevistar dois vizinhos e perguntar os últimos livros, artigos, filmes
+ou séries que viram e criar uma tabela.
+
+### Ferramentas
+
+As tabelas que discutimos durante esta introdução não precisaram de muito
+espaço horizontal. No entanto, há ocasiões nas quais desejamos escrever uma
+tabela com tamanho dinâmico e que tome a página toda. Para isso, existe o
+pacote [`tabularx`](https://www.ctan.org/pkg/tabularx), que define um novo
+ambiente que aceita o alinhamento `X`, que é flexível.
+
+Como em tudo em LaTeX, quantidade de pacotes e detalhes que podemos discutir é
+grande demais para este pequeno workshop. Deixo aqui alguns links úteis:
+
+- [Tutorial do Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Tables), do qual
+  tiramos muitas ideias
+- [Descrição de vários pacotes para tabelas, seus usos e
+  conflitos](http://tex.stackexchange.com/q/12672)
+- [Lista de ferramentas para ajudar a criação de
+  tabelas](http://tex.stackexchange.com/q/49414)
+- [Table Generator](http://www.tablesgenerator.com/)
+- [Table Editor](http://truben.no/table/)
+
 ## Referências
 
 - [Post no reddit sobre a tipografia do TAoCP antes do TeX]
@@ -522,3 +643,5 @@ Nos slides, exemplos de citação e poemas. Não faremos um exercício.
   fontes](http://www.lasca.ic.unicamp.br/pub/ctan/macros/latex/doc/encguide.pdf)
 - [LaTeX Tutorials: a
   Primer](https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)
+- Elementos do Estilo Tipográfico versão 3.0, por Robert Bringhurst. Cosac
+  Naify, 2008.

@@ -1,5 +1,5 @@
-\documentclass[draft]{beamer}
-\usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo}
+\documentclass[final]{beamer}
+\usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo,enumerate}
 \usepackage[brazil]{babel}
 
 \usetheme[sectionpage=simple,numbering=none]{metropolis}
@@ -792,6 +792,7 @@
   Ambientes: \code{itemize, enumerate} e \code{description}
 \end{frame}
 
+% Anatomia de uma lista
 \begin{frame}[fragile]
   \frametitle{\filename{listas.tex}}
   \LARGE
@@ -808,6 +809,30 @@
   \end{minted}
 \end{frame}
 
+% Exercício: completar a receita de panqueca com os ingredientes corretos.
+\begin{frame}
+  \frametitle{\filename{listas.tex}}
+  \Huge
+  Resolver \filename{listas-exercicio.tex}
+\end{frame}
+
+% Lista de ingredientes que os participantes devem colocar na receita. Notar a
+% palavra ingrediente, o número sequencial e o parênteses.
+\begin{frame}
+  \frametitle{\filename{listas.tex}}
+  \large
+  \begin{enumerate}[{Ingrediente} 1)]
+    \item 190g de farinha
+    \item 25g de açúcar
+    \item 10g de fermento químico em pó
+    \item 3g de sal\\[1em] … texto …\\
+    \item 25g de manteiga\\[1em] … texto …\\
+    \item 330g de leite
+    \item 80g de ovos
+  \end{enumerate}
+\end{frame}
+
+% Existem mais listas no arquivo listas.tex
 \begin{frame}
   \frametitle{\filename{listas.tex}}
   \Huge
@@ -870,6 +895,200 @@
     \flushright
     (Omar Khayyam)
   \end{verse}
+\end{frame}
+
+% tabelas.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  \filename{tabelas.tex}
+\end{frame}
+
+% Exemplo simples de tabela com o ambiente tabular
+\begin{frame}[fragile]
+  \frametitle{\filename{tabelas.tex}}
+  \Large
+  Exemplo do ambiente \code{tabular}:
+  \vspace{1em}
+
+  \begin{minipage}{.65\textwidth}
+    \begin{minted}[autogobble,fontsize=\large,breaklines]{latex}
+      \begin{tabular}{lcr}
+        1 & 2 & 3\\
+        4 & 5 & 6\\
+        7 & 8 & 9
+      \end{tabular}
+    \end{minted}
+  \end{minipage}
+  \hspace{.05\textwidth}
+  \begin{minipage}{.25\textwidth}
+    \begin{tabular}{lcr}
+      1 & 2 & 3\\
+      4 & 5 & 6\\
+      7 & 8 & 9
+    \end{tabular}
+  \end{minipage}
+\end{frame}
+
+% Com mais alguns detalhes como linhas verticais e horizontais
+\begin{frame}[fragile]
+  \frametitle{\filename{tabelas.tex}}
+  \Large
+  Linhas horizontais e verticais:
+  \vspace{1em}
+
+  \begin{minipage}{.65\textwidth}
+    \begin{minted}[autogobble,fontsize=\large,breaklines]{latex}
+      \begin{tabular}{l|c|r}
+        \hline
+        1 & 2 & 3\\
+        4 & 5 & 6\\
+        7 & 8 & 9\\
+        \hline
+      \end{tabular}
+    \end{minted}
+  \end{minipage}
+  \hspace{.05\textwidth}
+  \begin{minipage}{.25\textwidth}
+    \begin{tabular}{l|c|r}
+      \hline
+      1 & 2 & 3\\
+      4 & 5 & 6\\
+      7 & 8 & 9\\
+      \hline
+    \end{tabular}
+  \end{minipage}
+\end{frame}
+
+% O espaço em branco deixa o texto respirar e evita a tirania das linhas retas.
+% Essa citação do Bringhurst é fantástica.
+\begin{frame}
+  \frametitle{\filename{tabelas.tex}}
+  \large
+  \begin{quote}
+    Assim como o texto, as tabelas ficam canhestras quando abordadas de forma
+    puramente técnica. Boas soluções tipográficas não costumam surgir em resposta
+    a perguntas do tipo “Como posso enfiar essa quantidade de caracteres naquele
+    tanto de espaço?”.\\\hfill (Robert Bringhurst, \emph{Elementos do Estilo
+    Tipográfico)}
+  \end{quote}
+\end{frame}
+
+% Vejamos alguns exemplos de tabela em tabelas.tex.
+\begin{frame}
+  \frametitle{\filename{tabelas.tex}}
+  \Huge
+  Vejamos \filename{tabelas.tex}
+\end{frame}
+
+% Vamos revisar o que aprendemos no exemplo.
+\begin{frame}[fragile]
+  \frametitle{\filename{tabelas.tex}}
+  \Huge
+  Aprendemos:
+
+  \begin{itemize}
+    \only<1>{\item \code{tabular}}
+    \only<1>{\item tipografia da tabela}
+    \only<2>{\item quebras de linhas}
+    \only<2>{\item \code{booktabs}}
+    \only<3>{\item \mintinline{latex}{\multicolumn}}
+    \only<3>{\item \code{longtable}}
+  \end{itemize}
+\end{frame}
+
+% Exercício: formatar uma lista em CSV
+\begin{frame}
+  \frametitle{\filename{tabelas.tex}}
+  \Huge
+  Resolver: \filename{tabelas-exercicio.tex}
+\end{frame}
+
+% Temos declarado exatamente onde desejamos que a tabela fique, mas essa
+% abordagem nem sempre é boa, porque interrompe o fluxo do texto. Vamos
+% aprender mais sobre os ambientes do tipo float.
+\begin{frame}
+  \frametitle{\filename{tabelas.tex}}
+  \Huge
+  \only<1>{Ambiente \code{tabular} coloca a tabela após o texto}
+  \only<2>{Padrão profissional: \emph{floats}}
+  \only<3>{Dois floats: \code{table} e \code{figure}}
+\end{frame}
+
+% A sintaxe do ambiente table
+\begin{frame}[fragile]
+  \frametitle{\filename{tabelas.tex}}
+  \Large
+  Sintaxe de \code{table}:
+  \vspace{1em}
+
+    \begin{minted}[autogobble,fontsize=\large,breaklines]{latex}
+      \begin{table}[posição]
+        …
+      \end{table}
+    \end{minted}
+\end{frame}
+
+% Exemplo, com os comandos \centering, \caption e \label.
+\begin{frame}[fragile]
+  \frametitle{\filename{tabelas.tex}}
+  \Large
+  Veja a tabela~\ref{tab:numerosUmNove}:
+
+  \begin{minipage}{.65\textwidth}
+    \begin{minted}[autogobble,fontsize=\large,breaklines]{latex}
+    \begin{table}
+      \centering
+      \begin{tabular}{lcr}
+      1 & 2 & 3\\
+      4 & 5 & 6\\
+      7 & 8 & 9
+      \end{tabular}
+      \caption{Números de 1 a 9}
+      \label{tab:numerosUmNove}
+    \end{table}
+    \end{minted}
+  \end{minipage}
+  \hspace{.05\textwidth}
+  \begin{minipage}{.25\textwidth}
+    \begin{table}
+      \centering
+      \begin{tabular}{lcr}
+        1 & 2 & 3\\
+        4 & 5 & 6\\
+        7 & 8 & 9
+      \end{tabular}
+      \caption{Números de 1 a 9}
+      \label{tab:numerosUmNove}
+    \end{table}
+  \end{minipage}
+\end{frame}
+
+% Voltaremos ao arquivo anterior para brincar com esses conceitos e
+% referências cruzadas.
+\begin{frame}
+  \frametitle{\filename{tabelas.tex}}
+  \Huge
+  Voltemos a \filename{tabelas.tex}
+\end{frame}
+
+% Exercício: uma tabela do zero, usando o ambiente table e referenciando a
+% tabela num parágrafo anterior.
+\begin{frame}
+  \frametitle{\filename{tabelas.tex}}
+  \Huge
+  Resolver: \filename{tabelas-questionario-exercicio.tex}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{tabelas.tex}}
+  \Huge
+  Pacote \code{tabularx}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{tabelas.tex}}
+  \Huge
+  Veja o documento \filename{fala.md} para mais ferramentas
 \end{frame}
 
 \end{document}
