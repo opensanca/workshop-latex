@@ -1,0 +1,64 @@
+%
+% listas-exercicio.tex
+%
+% Rafael Beraldo <rberaldo@cabaladada.org>
+% Workshop de LaTeX do Opensanca
+% 28 de maio de 2016
+%
+% Problema: a receita a seguir está incompleta. Adicione os ingredientes do
+% slide usando o ambiente enumerate e customizando-o de acordo com as
+% instruções.
+%
+
+\documentclass[a4paper,oneside]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+\usepackage{microtype,enumerate}
+
+\title{Panqueca: o Hello, World! das receitas%
+  \footnote{Adaptado do livro \emph{Cooking for Geeks}, primeira edição,
+  escrito por Jeff Potter}}
+\author{Jeff Potter}
+\date{Julho de 2010}
+
+\begin{document}
+\frenchspacing
+
+\maketitle
+
+Em uma tigela, pese e misture:
+
+% Lista de ingredientes 1:
+% - 190g de farinha
+% - 25g de açúcar
+% - 10g de fermento químico em pó
+% - 3g de sal
+
+Em uma tigela separada e que possa ir ao micro-ondas, derreta:
+
+% Lista de ingredientes 2:
+% - 25g de manteiga
+
+Adicione à manteiga e bata para incorporar completamente:
+
+% Lista de ingredientes 3:
+% - 330g de leite
+% - 80g de ovos
+
+Derrame os ingredientes sólidos sobre os líquidos e bata até que os
+ingredientes estejam quase que completamente incorporados. Bolinhas de farinha
+não são um problema: é melhor evitar bater a massa demais, para minimizar a
+formação de glúten a partir de duas proteínas, a glutenina e a gliadina, que
+estão presentes na farinha (elas se ligam formando uma matriz parecida com uma
+rede).
+
+Coloque uma frigideira não-aderente no fogo médio-alto. Espere até que a panela
+esteja quente. O teste padrão é jogar algumas gotas de água na panela e
+observar se chiam; o teste geek é usar um termômetro infravermelho e checar se
+a panela chegou a 200~\textdegree C. Usando uma concha, copo de medida ou
+colher de sorvete, despeje cerca de meio copo de massa na panela. Enquanto o
+primeiro lado cozinha, é possível observar bolhas se formando na superfície de
+cima da panqueca. Vire a panqueca após que as bolham comecem a se formar, mas
+antes que estourem (cerca de dois minutos).
+\end{document}

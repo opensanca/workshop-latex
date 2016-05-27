@@ -1,0 +1,64 @@
+%
+% listas.tex
+%
+% Rafael Beraldo <rberaldo@cabaladada.org>
+% Workshop de LaTeX do Opensanca
+% 28 de maio de 2016
+%
+% Demonstra:
+% - Três ambientes para listas: itemize, enumerate e description
+% - Sintaxe para listas e listas aninhadas
+% - Customização do ambiente enumerate com o pacote enumerate
+%
+
+\documentclass[a4paper,oneside]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+\usepackage{microtype,enumerate}
+
+\begin{document}
+\frenchspacing
+
+\section{Listas}
+
+Por padrão, o \LaTeX{} vem com três ambientes para criar listas:
+\texttt{itemize, enumerate} e \texttt{description}.
+
+% Mudar o tipo de lista para enumerate
+\begin{itemize}
+  \item O ambiente \texttt{itemize} é geralmente usado para listas cuja ordem
+    não é importante.
+  \item A numeração que listas do tipo \texttt{enumerate} trazem pode indicar
+    os passos necessários para completar uma tarefa, ou sua ordem de
+    importância.
+  \item A lista do tipo \texttt{description} é excelente para explicar
+    conceitos relacionados. Que oportunidade perdida de usá-la!
+\end{itemize}
+
+Listas de descrição têm uma sintaxe um pouco diferente:
+
+\begin{enumerate}
+  \item[Bit] Abreviação de \emph{binary digit}, um bit pode tomar o valor de~1
+    ou~2, apenas.
+  \item[Byte] Uma unidade de informação digital que geralmente tem oito bits. O
+    “y” foi escolhido de propósito para evitar que fosse acidentalmente
+    confundido com “bit”.
+\end{enumerate}
+
+\section{Customizando o ambiente \texttt{enumerate}}
+
+É possível customizar o ambiente \texttt{enumerate} adicionando o pacote
+\texttt{enumerate} ao seu preâmbulo. O resultado é que o ambiente aceitará um
+argumento na forma de uma string que contém um desses valores: \texttt{A,
+a, I, i} ou \texttt{1}.
+
+% Demonstrar diferentes possibilidades de customização
+\begin{enumerate}[A)]
+  \item Tales de Mileto
+  \item Pitágoras
+  \item Xenófanes
+  \item Empédocles
+  \item Aristóteles
+\end{enumerate}
+\end{document}

@@ -399,7 +399,7 @@ argumentos:
 Existem outras opções e comandos que nos permitem customizar o conteúdo do
 cabeçalho e do rodapé, mas não trataremos deles nesse workshop.
 
-## Exercício
+### Exercício
 
 Em `layout-pagina-exercicio.tex`, vamos começar a escrever um certificado de
 conclusão do workshop. No momento, não vamos nos preocupar com a posição exata
@@ -462,6 +462,49 @@ maneira, com os comandos `\vspace{comprimento}` e `\vfill`.
 `posicao-texto-exercicio.tex` continua o exercício anterior, finalizando nosso
 certificado.
 
+## listas.tex
+
+Ainda discutiremos alguns outros ambientes. A segunda classe de ambientes quem
+vêm por padrão com o LaTeX são `itemize`, `enumerate` e `description`. Quem
+adivinha para o que elas servem?
+
+    \begin{itemize}
+      \item O ambiente \code{itemize} é geralmente usado para listas cuja ordem
+      não é importante.
+      \item A numeração que listas do tipo \code{enumerate} trazem pode indicar
+      os passos necessários para completar uma tarefa, ou sua ordem de
+      importância.
+      \item A lista do tipo \code{description} é excelente para explicar
+      conceitos relacionados. Que oportunidade perdida de usá-la!
+    \end{itemize}
+
+Vamos abrir o arquivo `listas.tex` e brincar com alguns conceitos. Como podemos
+criar listas dentro de listas? Qual o resultado que você espera? E quanto à
+lista `description`: como devemos adicionar as descrições aos itens?
+
+### O pacote `enumerate`
+
+Uma maneira muito elegante de customizar suas listas ordenadas é o pacote
+[`enumerate`](https://www.ctan.org/pkg/enumerate). Ele adiciona um argumento
+adicional ao ambiente de mesmo nome, permitindo customizar a lista facilmente:
+
+    \begin{itemize}[A)]
+    \item Tales de Mileto
+    \item Pitágoras
+    \item Xenófanes
+    \item Empédocles
+    \item Aristóteles
+    \end{itemize}
+
+### Exercício
+
+Vamos editar uma lista de ingredientes para uma receita de panqueca em
+`listas-exercicio.tex`. Há um problema: os contadores resetam quando uma lista
+é terminada. Podemos criar um novo contador `\newcounter{ingredients}` e, ao
+fim da primeira lista, salvar o valor de `enumi` com
+`\setcounter{ingredients}{\value{enumi}}`. No começo da lista que queremos
+continuar, podemos usar o comando `\setcounter{enumi}{\value{ingredients}}`.
+
 ## ABNTeX2
 
 TODO: Ensinar como usar o pacote ABNTeX2.
@@ -472,6 +515,6 @@ TODO: Ensinar como usar o pacote ABNTeX2.
   (https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
 - [Guia do Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
 - [História da codificação de
-  fontes](ftp://ftp.dante.de/tex-archive/macros/latex/doc/encguide.pdf)
+  fontes](http://www.lasca.ic.unicamp.br/pub/ctan/macros/latex/doc/encguide.pdf)
 - [LaTeX Tutorials: a
   Primer](https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)
