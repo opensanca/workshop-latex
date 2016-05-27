@@ -505,9 +505,13 @@ fim da primeira lista, salvar o valor de `enumi` com
 `\setcounter{ingredients}{\value{enumi}}`. No começo da lista que queremos
 continuar, podemos usar o comando `\setcounter{enumi}{\value{ingredients}}`.
 
-## ABNTeX2
+## citacoes-versos.tex
 
-TODO: Ensinar como usar o pacote ABNTeX2.
+Dois ambientes úteis para citações são `quote` e `quotation`. O primeiro é útil
+para uma ou várias citações curtas. O segundo é melhor para citações longas,
+pois os parágrafos são indentados.
+
+Nos slides, exemplos de citação e poemas. Não faremos um exercício.
 
 ## Referências
 

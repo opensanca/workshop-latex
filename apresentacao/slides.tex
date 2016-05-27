@@ -814,4 +814,62 @@
   Aprenderemos mais em \filename{listas.tex}
 \end{frame}
 
+% citacoes-versos.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  \filename{citacoes-versos.tex}
+\end{frame}
+
+% Ambientes quote e quotation
+\begin{frame}
+  \frametitle{\filename{citacoes-versos.tex}}
+  \Huge
+  Ambientes: \code{quote} e \code{quotation}
+\end{frame}
+
+% Exemplo de uso do ambiente quote
+\begin{frame}[fragile]
+  \frametitle{\filename{citacoes-versos.tex}}
+  \Large
+  \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+  \begin{quote}
+    Não entre em pânico!\hfill (Douglas Adams)
+  \end{quote}
+  \end{minted}
+  \vspace{1em}
+
+  \begin{quote}
+    Não entre em pânico!\hfill (Douglas Adams)
+  \end{quote}
+\end{frame}
+
+% Exemplo de uso do ambiente verse
+\begin{frame}[fragile]
+  \frametitle{\filename{citacoes-versos.tex}}
+  \begin{minted}[autogobble,fontsize=\large,breaklines]{latex}
+    \begin{verse}
+      O vinho dá-te o calor que não tens;\\
+      suaviza o jugo do passado e te alivia\\
+      das brumas do futuro; inunda-te de luz\\
+      e te liberta desta prisão.
+      \flushright
+      (Omar Khayyam)
+    \end{verse}
+  \end{minted}
+\end{frame}
+
+% Output do comando anterior
+\begin{frame}
+  \frametitle{\filename{citacoes-versos.tex}}
+  \Large
+  \begin{verse}
+    O vinho dá-te o calor que não tens;\\
+    suaviza o jugo do passado e te alivia\\
+    das brumas do futuro; inunda-te de luz\\
+    e te liberta desta prisão.
+    \flushright
+    (Omar Khayyam)
+  \end{verse}
+\end{frame}
+
 \end{document}

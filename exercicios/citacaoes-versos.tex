@@ -1,0 +1,46 @@
+%
+% citacoes-versos.tex
+%
+% Rafael Beraldo <rberaldo@cabaladada.org>
+% Workshop de LaTeX do Opensanca
+% 28 de maio de 2016
+%
+% Demonstra:
+% - Os ambientes quote, quotation e verse
+%
+
+\documentclass[a4paper,oneside]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+\usepackage{microtype}
+
+\begin{document}
+\frenchspacing
+
+\section{Citações}
+
+Os ambientes \texttt{quote} e \texttt{quotation} são úteis para citações. O
+primeiro é mais adequado para citações curtas, enquanto que o segundo funciona
+bem para citações longas, pois os parágrafos são indentados.
+
+\begin{quote}
+  Não entre em pânico!\hfill (Douglas Adams)
+\end{quote}
+
+\section{Poemas}
+
+O ambiente \texttt{verse} é particularmente adequado para poemas, pois quebra
+as linhas de maneira a indicar quebras intencionais e aquelas causadas pelo
+tamanho da página.
+
+% Usar \parbox para demonstrar a quebra de linhas
+\begin{verse}
+  O vinho dá-te o calor que não tens;\\
+  suaviza o jugo do passado e te alivia\\
+  das brumas do futuro; inunda-te de luz\\
+  e te liberta desta prisão.
+  \flushright
+  (Omar Khayyam)
+\end{verse}
+\end{document}
