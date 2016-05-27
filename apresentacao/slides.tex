@@ -1,5 +1,4 @@
 \documentclass[draft]{beamer}
-  \frametitle{\filename{poliglota-exercicio.tex}}
 \usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo}
 \usepackage[brazil]{babel}
 
@@ -35,10 +34,10 @@
   \end{minted}
 \end{frame}
 
-% Exercício: hello-world.tex %%%%%%%%%%%%%
+% hello-world.tex %%%%%%%%%%%%%
 \begin{frame}[standout]
   \huge
-  Exercício: \filename{hello-world.tex}
+  \filename{hello-world.tex}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -69,11 +68,18 @@
   \end{minted}
 \end{frame}
 
-% Exercício: espaco-branco.tex %%%%%%%%%%%%%%
-% No exercício, temos dois parágrafos do Guia do Mochileiro das Galáxias.
+% Vamos cometer uns erros de propósito e lidar com as consequências?
+\begin{frame}
+  \frametitle{\filename{hello-world.tex}}
+  \Huge
+  Erros de compilação
+\end{frame}
+
+% espaco-branco.tex %%%%%%%%%%%%%%
+% No exemplo, temos dois parágrafos do Guia do Mochileiro das Galáxias.
 \begin{frame}[standout]
   \huge
-  Exercício: \filename{espaco-branco.tex}
+  \filename{espaco-branco.tex}
 \end{frame}
 
 % Ensinar que, para criar uma nova linha, usamos estes comandos.
@@ -94,17 +100,17 @@
   Resolver \filename{espaco-branco-exercicio.tex}
 \end{frame}
 
-% Exercício: poliglota-exercicio.tex %%%%%%%%%%%%%%
+% poliglota-exercicio.tex %%%%%%%%%%%%%%
 \begin{frame}[standout]
   \huge
-  Exercício: \filename{poliglota-exercicio.tex}
+  \filename{poliglota-exercicio.tex}
 \end{frame}
 
 % No exemplo anterior, espaco-branco.tex, os acentos --- na verdade,
 % diacríticos --- não apareceram. Alguém saberia o motivo?
 \begin{frame}
   \frametitle{\filename{poliglota-exercicio.tex}}
-  \LARGE
+  \huge
   Acentos não apareciam em \filename{espaco-branco.tex}
 \end{frame}
 
@@ -136,7 +142,7 @@
   O \code{polyglossia} traz benefícios como:
   \begin{itemize}
     \only<1>{\item Hifenização}
-    \only<2>{\item Strings como \code{\textbackslash today}}
+    \only<2>{\item Strings como \mintinline{latex}{\today}}
     \only<3>{\item Convenções tipográficas localizadas}
   \end{itemize}
 \end{frame}
@@ -179,10 +185,10 @@
   \url{https://www.ctan.org/pkg/polyglossia}
 \end{frame}
 
-% Exercício: artigo-exercicio.tex %%%%%%%%%%%%%%
+% artigo-exercicio.tex %%%%%%%%%%%%%%
 \begin{frame}[standout]
   \huge
-  Exercício: \filename{artigo-exercicio.tex}
+  \filename{artigo-exercicio.tex}
 \end{frame}
 
 % Dar uma olhada no arquivo. Ensinar a distinção entre o preâmbulo e o corpo do
@@ -196,7 +202,7 @@
 % Explicar as opções da classe article que escolhi
 \begin{frame}[fragile]
   \frametitle{\filename{artigo-exercicio.tex}}
-  \LARGE
+  \huge
   Classes comuns:
   \begin{multicols}{2}
     \begin{itemize}
@@ -232,14 +238,14 @@
 % Compilar o documento várias vezes, com opções diferentes
 \begin{frame}
   \frametitle{\filename{poliglota-exercicio.tex}}
-  \huge
-  Vamos testar algumas opções?
+  \Huge
+  Testar diferentes opções de classe
 \end{frame}
 
 % Olharemos agora os pacotes carregados
 \begin{frame}
   \frametitle{\filename{poliglota-exercicio.tex}}
-  \huge
+  \Huge
   Pacotes: \code{polyglossia, blindtext} e \code{hyperref}
 \end{frame}
 
@@ -283,12 +289,12 @@
 \begin{frame}
   \frametitle{\filename{poliglota-exercicio.tex}}
   \Large
-  Exemplo de \code{\textbackslash frenchspacing}:
+  Exemplo de \mintinline{latex}{\frenchspacing}:
 
   \vspace{1em}
   \begin{minipage}{.45\textwidth}
     \nonfrenchspacing
-    \code{\textbackslash nonfrenchspacing}
+    \mintinline{latex}{\nonfrenchspacing}:
 
     “A poesia vogon é, como todos sabem, a terceira pior do Universo. Em segundo
     lugar vem a poesia dos azgodos de Kria.”
@@ -296,7 +302,7 @@
   \hspace{.05\textwidth}
   \begin{minipage}{.45\textwidth}
     \frenchspacing
-    \code{\textbackslash frenchspacing}
+    \mintinline{latex}{\frenchspacing}:
     
     “A poesia vogon é, como todos sabem, a terceira pior do Universo. Em segundo
     lugar vem a poesia dos azgodos de Kria.”
@@ -324,7 +330,7 @@
 % Aquivos auxiliares
 \begin{frame}[fragile]
   \frametitle{\filename{poliglota-exercicio.tex}}
-  \Large
+  \LARGE
   Arquivos auxiliares:
 
   \begin{minted}[autogobble,fontsize=\Large,breaklines]{bash}
@@ -341,7 +347,7 @@
 \begin{frame}
   \frametitle{\filename{poliglota-exercicio.tex}}
   \Huge
-  Para limpar os arquivos auxiliares:
+  Limpar arquivos auxiliares:
 
   \code{\$ latexmk -c}
 \end{frame}
@@ -352,10 +358,10 @@
   Resolver \filename{poliglota-exercicio.tex}
 \end{frame}
 
-% Exercício: fontes.tex %%%%%%%%%%%%%%
+% fontes.tex %%%%%%%%%%%%%%
 \begin{frame}[standout]
   \huge
-  Exercício: \filename{fontes.tex}
+  \filename{fontes.tex}
 \end{frame}
 
 % MetaFont era o sistema original, mas hoje usamos principalmente fontes do
@@ -527,24 +533,242 @@
 \begin{frame}
   \frametitle{\filename{fontes.tex}}
   \Huge
+  Linux Libertine e ligaduras
+
   \fontspec{Linux Libertine}{
     affair\qquad fjord\qquad flor\\
     af\mbox{}fair\qquad f\mbox{}jord\qquad f\mbox{}lor
   }
 \end{frame}
 
+% Antes do exercício, vamos rever os conceitos que discutimos de maneira
+% prática.
+\begin{frame}
+  \frametitle{\filename{fontes.tex}}
+  \Huge
+  Demonstrar ideias em \filename{fontes.tex}
+\end{frame}
+
+% Resolver o exercício fontes-exercicio.tex.
 \begin{frame}
   \frametitle{\filename{fontes.tex}}
   \Huge
   Resolver \filename{fontes-exercicio.tex}
 \end{frame}
 
-% Exercício: layouts-pagina.tex %%%%%%%%%%%%%%
+% layouts-pagina.tex %%%%%%%%%%%%%%
 \begin{frame}[standout]
   \Huge
-  Exercício: \filename{layouts-pagina.tex}
+   \filename{layouts-pagina.tex}
 \end{frame}
 
+% Vamos mudar a opção de classe de onecolumn para twocolumn e carregar o pacote
+% showframe.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  \only<1>{Copiar solução de \filename{fontes-exercio.tex} como
+  \filename{layouts-pagina.tex}}
+  \only<2>{Mudar para \code{twocolumn}, carregar o pacote \code{showframe}}
+\end{frame}
 
+% Na folha A4, apenas uma coluna coluna de texto é difícil de ler com margens
+% curtas. Mas usar margens grandes desperdiça papel.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  \code{onecolumn}: margens grandes demais
 
+  \code{twocolumn}: nem sempre podemos
+\end{frame}
+
+% Soluções para o problema do tamanho da coluna de texto vs margens
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  Soluções:
+  \begin{itemize}
+    \only<1>{\item Colunas}
+    \only<2>{\item \code{fullpage}}
+    \only<3>{\item \code{fullpage} e entrelinhas maiores}
+  \end{itemize}
+\end{frame}
+
+% Se decidirmos usar o pacote fullpage, é uma boa ideia aumentar o espaçamento
+% entre as linhas.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  Pacote \code{setspace}:
+
+  \begin{itemize}
+    \item \code{\textbackslash singlespacing}
+    \item \code{\textbackslash onehalfspacing}
+    \item \code{\textbackslash doublespacing}
+  \end{itemize}
+\end{frame}
+
+% Outro fator que influencia o layout da página é seu estilo. Estes são os três
+% comandos básicos e estilos que podemos escolher.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  \code{\textbackslash pagestyle} e \code{\textbackslash thispagestyle}
+
+  \begin{itemize}
+    \item \code{empty}
+    \item \code{plain}
+    \item \code{headings}
+  \end{itemize}
+\end{frame}
+
+% Outro fator que influencia o layout da página é seu estilo. Estes são os três
+% comandos básicos e estilos que podemos escolher.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  Demonstração em \filename{layouts-pagina.tex}
+\end{frame}
+
+% Faremos um certificado de conclusão do curso
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \Huge
+  Certificado de conclusão
+\end{frame}
+
+% Uma ideia de como ele poderia ficar
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\textbf{OpenSanca}}\\[2em]
+    {\LARGE\textsc{Certificado}}
+  \end{center}
+
+    \noindent Certificamos que Tal Pessoa da Silva participou de um curso em
+    nosso grupo no dia 28 de maio de 2016 e está qualificado para editar textos
+    em \LaTeX.
+
+    \vfill
+    \begin{flushright}
+      \emph{Os Organizadores}\\
+      \emph{OpenSanca}\\
+    \end{flushright}
+\end{frame}
+
+% Começar nosso certificado de conclusão de curso
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \Huge
+  Resolver \filename{layouts-pagina-exemplo.tex}
+\end{frame}
+
+% posicao-texto.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+   \filename{posicao-texto.tex}
+\end{frame}
+
+% Nosso certificado pode ter ficado legal, mas poderia ser melhor ainda se
+% ajustarmos o texto em relação à página.
+\begin{frame}
+  \frametitle{\filename{posicao-texto.tex}}
+  \Huge
+  Problemas com o certificado?
+\end{frame}
+
+% Antes de controlar a posição do texto, temos que entender o que é um
+% ambiente.
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \Huge
+  Ambientes:
+
+  \begin{minted}[autogobble,fontsize=\Huge,breaklines]{latex}
+    \begin{ambiente}
+      …
+    \end{ambiente}
+  \end{minted}
+\end{frame}
+
+% Três ambientes para controlar posição.
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \Large
+  Ambientes \code{center}, \code{flushleft} e \code{flushright}
+
+  % Código:
+  \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+    \begin{center}
+      Este texto será centralizado.
+    \end{center}
+  \end{minted}
+
+  % Resultado:
+  \begin{center}
+    Este texto será centralizado.
+  \end{center}
+\end{frame}
+
+% Ainda podemos controlar o espaço dentro de uma linha.
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \Huge
+  \mintinline{latex}{\hspace{comprimento}}
+\end{frame}
+
+% Por exemplo, um espaço de 1,5cm:
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \LARGE
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+    Essa frase\hspace{1.5cm} está esticada.
+  \end{minted}
+  \vspace{1em}
+
+  Essa frase\hspace{1.5cm} está esticada.
+\end{frame}
+
+% O LaTeX aceita uma série de unidades
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \LARGE
+  Unidades que o \LaTeX{} conhece:
+
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item\code{mm}
+      \item\code{cm}
+      \item\code{in}
+      \item\code{pt}
+      \item\code{em}
+      \item\code{ex}
+      \item\mintinline{latex}{\textheight}
+      \item\mintinline{latex}{\textwidth}
+      \item\mintinline{latex}{\pageheight}
+      \item\mintinline{latex}{\pageheight}
+    \end{itemize}
+  \end{multicols}
+\end{frame}
+
+% O comando \hfill preenche todo o espaço disponível
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \LARGE
+  \mintinline{latex}{Começo\hfill meio\hfill fim}
+  \vspace{1em}
+
+  Começo\hfill meio\hfill fim
+\end{frame}
+
+% E, finalmente, existem os comandos \vspace e \hfill
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \huge
+  Comandos análogos:
+
+  \mintinline{latex}{\vspace{comprimento}}
+  \vspace{1em}
+
+  \mintinline{latex}{\vfill}
+\end{frame}
 \end{document}

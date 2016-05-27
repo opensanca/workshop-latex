@@ -23,7 +23,7 @@ tipografia digital). Acontece que a tabela ANSII nunca foi pensada com a
 tradição tipográfica em mente, mas sim levando em conta as limitações dos
 sistemas computacionais.
 
-## Mão na massa
+## O básico de LaTeX
 
 O LaTeX é uma linguagem de marcação de texto, como o HTML ou o Markdown. Isso
 significa que você deve dizer ao computador como o texto deve ser formatado,
@@ -36,7 +36,7 @@ Em geral, os comandos que utilizaremos em LaTeX começam com uma barra ` \ `,
 seguida pelo nome do comando. Comandos podem ter argumentos, como no caso
 acima.
 
-### hello-world.tex
+## hello-world.tex
 
 Vamos abrir o arquivo `hello-world.tex` e aprender como documentos são
 organizados no LaTeX. Tudo o que está entre `\begin{document}` e
@@ -61,11 +61,11 @@ com `\section` quando eu mudo para a classe `minimal`?
 Perguntar, aliás, o que são aquelas linhas que começam com `%` no topo do
 arquivo, e por que não são impressas no documento final?
 
-#### Exercício
+### Exercício
 
 Compilar o arquivo hello-world.tex com sucesso.
 
-### espaco-branco.tex
+## espaco-branco.tex
 
 Aqui temos dois parágrafos do começo de _O guia do mochileiro das galáxias._
 
@@ -80,7 +80,7 @@ inteligente.
 Para criar um novo parágrafo, devemos deixar um espaço em branco entre as
 linhas. Novas linhas são ignoradas: para inserir uma linha, `\newline` ou `\\`.
 
-#### Exercício 
+### Exercício 
 
 `espaco-branco-exercicio.tex`. Arrumar o arquivo, deixando os
 espaços e parágrafos corretos.
@@ -88,7 +88,7 @@ espaços e parágrafos corretos.
 Notar que nem tudo funcionará perfeitamente. Qual problemas encontramos? Sim,
 os diacríticos não apareceram corretamente. Alguém saberia o motivo?
 
-### poliglota-exercicio.tex
+## poliglota-exercicio.tex
 
 Ao compilar o documento `espaco-branco.tex`, nós vemos que muitos caracteres
 como o “é” de “além” não foram impressos. Isso acontece porque o LaTeX, nas
@@ -117,7 +117,7 @@ Para carregar as configurações para o nosso idioma, devemos usar o comando:
 
     \setdefaultlanguage{brazil}
 
-#### Exercício
+### Exercício
 
 Adicionar o pacote `polyglossia` abaixo do `\documentclass` e compilar o
 arquivo.
@@ -125,7 +125,7 @@ arquivo.
 Quando o exercício terminar, **mostrar o CTAN e como encontrar documentação
 para os pacotes.** Mostrar a documentação do `polyglossia` como exemplo.
 
-### artigo-exercicio.tex
+## artigo-exercicio.tex
 
 Agora, vamos olhar para um documento um pouco mais complexo, mas também mais
 típico. `artigo-exemplo.tex` demonstra alguns conceitos interessantes em LaTeX.
@@ -133,7 +133,7 @@ Vamos começar pela organização de um aquivo `.tex`. Basicamente, ele é divid
 em um *preâmbulo* no qual estão os pacotes e opções que utilizaremos e o
 *documento em si,* que começa a partir do comando `\begin{document}`.
 
-#### Preâmbulo: classes e suas opções
+### Preâmbulo: classes e suas opções
 
 Vamos explorar o preâmbulo para começar. A primeira linha que chama nossa atenção é:
 
@@ -173,13 +173,13 @@ opções de classe mais comuns:
 **Compilar o mesmo documento com várias opções diferentes e mostrar os
 resultados.**
 
-#### Preâmbulo: pacotes e comandos para o título
+### Preâmbulo: pacotes e comandos para o título
 
 Após o `\documentclass`, três pacotes são carregados: `polyglossia, blindtext`
 e `hyperref`. Olhando o código-fonte, o que os dois últimos pacotes devem
 fazer? **Mudar o conteúdo do comando `\author` para o seguinte:**
 
-    \author{Rafael Beraldo \\
+    \author{Rafael Beraldo \\[1cm]
     \href{mailto:rberaldo@cabaladada.org}{\textless rberaldo@cabaladada.org \textgreater}
 
 O que será impresso agora?
@@ -193,13 +193,13 @@ fontes.
 `microtype`](http://mirrors.ctan.org/macros/latex/contrib/microtype/microtype.pdf),
 que tem exemplos de suas funcionalidades.**
 
-#### O documento em si
+### O documento em si
 
 No corpo do documento, entre `\begin{document}` e `\end{document}` existem
 vários comandos interessantes. **Discutir o significado de `\frenchspacing` e
 ensinar também o comando `\subsection`.**
 
-#### Compilação e arquivos auxiliares
+### Compilação e arquivos auxiliares
 
 **Compilar o arquivo e mostrar a quantidade de arquivos que foram produzidos.**
 A quantidade de arquivos produzidos é sempre muito grande, mas a maior parte
@@ -214,13 +214,13 @@ https://en.wikibooks.org/wiki/LaTeX/Basics#Ancillary_files
 Para evitar que tantos arquivos sejam mantidos, podemos utilizar o comando
 `latexmk -c`. 
 
-#### Exercício
+### Exercício
 
 Transformar o arquivo `artigo-exercicio.tex` em um arquivo LaTeX e compilá-lo.
 Mostrar o arquivo resolvido na tela de discutir, primeiro, como implementá-lo
 com a plateia.
 
-### fontes.tex
+## fontes.tex
 
 Originalmente, o TeX foi projetado para utilizar o sistema MetaFont, também
 projetado pelo Prof. Donald Knuth. Os sistemas mais populares atualmente são,
@@ -228,7 +228,7 @@ porém, o Truetype `(ttf)` e OpenType `(otf)`. Antes de aprender a trabalhar com
 fontes, seus estilos e tamanhos, gostaria de contar rapidamente a história das
 fontes no TeX.
 
-#### Fontes e codificação no início do TeX
+### Fontes e codificação no início do TeX
 
 ![A tabela ASCII](images/ascii-chart.png "A tabela ASCII")
 
@@ -266,7 +266,7 @@ pacotes no preâmbulo para escrever textos em português:
 
 Felizmente, hoje existe uma solução mais simples e abrangente.
 
-#### UTF-8, UTF-16, UTF-32, Unicode, WTF?
+### UTF-8, UTF-16, UTF-32, Unicode, WTF?
 
 O Unicode é um padrão que começou no fim da década de 1980 e hoje tem mais de
 120 000 caracteres. O objetivo é codificar a maior parte dos sistemas de
@@ -289,7 +289,7 @@ Para carregar o pacote `fontspec`, basta adicionar o comando
 automaticamente, é a `TU`: TeX Unicode. Aprenderemos mais sobre esse pacote no
 decorrer desse exercício.
 
-#### Itálicos, negritos e outros tipos
+### Itálicos, negritos e outros tipos
 
 Fontes geralmente vêm em famílias que contém diversos tipos: romanas maiúsculas
 e minúsculas, itálicos, negritos e versaletes, além dos algorismos de título e
@@ -302,7 +302,7 @@ esses tipos, temos os comandos a seguir à nossa disposição.
 - `\textsc{}`: versaletes (em inglês: *small caps*)
 - `\texttt{}`: fonte de teletipo
 
-#### Tamanhos
+### Tamanhos
 
 Assim como diferentes tipos carregam diferentes significados, os tamanhos das
 fontes também devem revelar alguma intenção semântica. Os tamanhos também devem
@@ -334,7 +334,7 @@ cresceu dentro da tradição anglo-saxã de tipografia, que define um ponto como
 0.35145980 mm. No entanto, com o advento do PostScript da Adobe, o ponto foi
 redefinido para 0.3527 mm (1/72 in).
 
-#### Selecionar fontes diferentes
+### Selecionar fontes diferentes
 
 Uma das maiores vantagens de utilizar o `fontspec` é o comando de seleção de
 fontes. Antigamente, era necessário carregar um pacote que implementasse a
@@ -352,20 +352,18 @@ fazer o upload das fontes para o serviço e especificar o caminho. Por exemplo:
       Path = fonts/
     ]
 
-**Mostrar setmainfont em ação; mostrar ligaduras nos slides.**
+Uma funcionalidade muitas vezes ignorada sobre as fontes são as ligaduras. Elas
+acontecem em sequências de caracteres que colidem naturalmente e são uma
+tradição tipográfica muito antiga, que ganhamos de graça usando o LaTeX.
 
-#### Exercício
+### Exercício
 
-**TODO!** Ideias:
+Vamos resolver `fontes-exercicio.tex`.
 
-- Mudar o estilo de fontes
-- Usar old style
-- Tamanhos
-
-### layouts-pagina.tex
+## layouts-pagina.tex
 
 Usando a solução do exercício anterior, vamos mudar a opção de classe
-`twocolumn` para `onecolumn` e visualizar o efeito dessa mudança no layout da
+`onecolumn` para `twocolumn` e visualizar o efeito dessa mudança no layout da
 página. Também carregaremos o pacote `showframe`. **Mostrar como as margens são
 muito maiores.** Parece uma perda de papel — e é — mas existe um motivo por
 trás de margens são grandes: quando lemos uma linha longa demais, perdemos a
@@ -401,10 +399,68 @@ argumentos:
 Existem outras opções e comandos que nos permitem customizar o conteúdo do
 cabeçalho e do rodapé, mas não trataremos deles nesse workshop.
 
+## Exercício
+
+Em `layout-pagina-exercicio.tex`, vamos começar a escrever um certificado de
+conclusão do workshop. No momento, não vamos nos preocupar com a posição exata
+do texto no papel. Algumas ideias de como implementar:
+
+- Um certificado em modo de paisagem é muito mais legal
+- Quais seriam os tamanhos dos diferentes textos? Qual a relação hierárquica
+  entre eles? Justifique sua decisão.
+
+A ideia para este exercício foi tirada do livro *LaTeX Tutorials: a Primer*.
+
+## posicao-texto.tex
+
+Se quisermos que nosso certificado fique mais parecido com o slide anterior,
+precisamos aprender a colocar nosso texto nas regiões do papel que desejamos.
+Por padrão, as caixas de texto em LaTeX são justificadas, mas há outras opções
+comuns como textos centralizados, alinhados à esquerda ou à direita.
+
+Para determinar a posição horizontal do texto, precisamos encontrar nosso
+primeiro *ambiente.* Na verdade, um dos primeiros construtos que encontramos em
+nossa jornada foi o ambiente `document`, delimitado por dois comandos: `\begin`
+e `\end`.
+
+O ambiente `center`, com o nome sugere, se encarrega de centralizar texto na
+página:
+
+    \begin{center}
+      Este texto será centralizado.
+    \end{center}
+
+De maneira similar, os ambiente `flushleft` e `flushright` alinham texto ao
+lado esquerdo e direito do papel, respectivamente.
+
+Além disso, é possível controlar o espaço dentro de uma linha com o comando
+`\hspace{comprimento}`, por exemplo:
+
+    Essa frase\hspace{1.5cm} está esticada.
+
+Algumas unidades que o LaTeX reconhece são:
+
+- `mm`
+- `cm`
+- `in`
+- `pt`
+- `em` (comprimento da letra “m”)
+- `ex` (altura da letra “x”)
+- `\textheight` e `\textwidth` (altura e comprimento da corpo do texto)
+- `\pageheight` e `\pagewidth` (altura e comprimento da página toda)
+
+Ainda é possível utilizar o comando `\hfill`, que preenche todo o espaço
+disponível na linha:
+
+    Começo\hfill meio\hfill fim
+
+Finalmente, o espaço vertical entre os parágrafos pode ser controlado da mesma
+maneira, com os comandos `\vspace{comprimento}` e `\vfill`.
+
 ### Exercício
 
-TODO: página em modo paisagem com duas colunas de texto e outras coisas que
-conseguir juntar nessa seção.
+`posicao-texto-exercicio.tex` continua o exercício anterior, finalizando nosso
+certificado.
 
 ## ABNTeX2
 
@@ -417,3 +473,5 @@ TODO: Ensinar como usar o pacote ABNTeX2.
 - [Guia do Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
 - [História da codificação de
   fontes](ftp://ftp.dante.de/tex-archive/macros/latex/doc/encguide.pdf)
+- [LaTeX Tutorials: a
+- Primer](https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)

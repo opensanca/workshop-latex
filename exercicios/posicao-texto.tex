@@ -1,0 +1,49 @@
+%
+% posicao-texto.tex
+%
+% Rafael Beraldo <rberaldo@cabaladada.org>
+% Workshop de LaTeX do Opensanca
+% 28 de maio de 2016
+%
+% Demonstra:
+% 
+%
+
+\documentclass[a4paper,oneside]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+\usepackage{microtype}
+
+\begin{document}
+\frenchspacing
+
+\section{Ambientes}
+
+Para posicionar o texto horizontalmente na página, podemos usar três
+\textbf{ambientes}: \texttt{center, flushleft} e \texttt{flushright}.
+
+\begin{center}
+  Todo este texto será centralizado na página.
+\end{center}
+
+\begin{flushleft}
+  Esse parágrafo será alinhado à esquerda e não será justificado. Mais abaixo,
+  veremos como ajustar a posição de um texto dentro da própria linha.
+\end{flushleft}
+
+\begin{flushright}
+  Também podemos alinhar texto à direita. Além desses ambientes, podemos mudar
+  o alinhamento do texto usando os comandos \verb+centering+, \verb+flushleft+
+  e \verb+flushright+.
+\end{flushright}
+
+\section{Controlando o espaço na linha}
+
+Os comandos \verb+\hspace{comprimento}+ e \verb+\hfill+ nos permitem controlar
+o espaço dentro de uma linha:
+
+Aqui haverá\hspace{1.5cm} um espaço.
+
+Começo\hfill meio\hfill fim.
+\end{document}
