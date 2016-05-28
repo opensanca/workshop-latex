@@ -249,7 +249,7 @@ fontes no TeX.
 
 ### Fontes e codificação no início do TeX
 
-![A tabela ASCII](images/ascii-chart.png "A tabela ASCII")
+![A tabela ASCII](imagens/ascii-chart.png "A tabela ASCII")
 
 Mesmo para o olhar leigo, a tabela ASCII deve parecer terrivelmente incompleta.
 Dos 128 caracteres possíveis (2^7), apenas 95 são imprimíveis, e não há uma
