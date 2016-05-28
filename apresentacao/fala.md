@@ -483,9 +483,9 @@ certificado.
 
 ## listas.tex
 
-Ainda discutiremos alguns outros ambientes. A segunda classe de ambientes quem
-vêm por padrão com o LaTeX são `itemize`, `enumerate` e `description`. Quem
-adivinha para o que elas servem?
+Nas próximas seções, discutiremos vários outros ambientes. A segunda classe de
+ambientes quem vêm por padrão com o LaTeX são `itemize`, `enumerate` e
+`description`. Quem adivinha para o que elas servem?
 
     \begin{itemize}
       \item O ambiente \code{itemize} é geralmente usado para listas cuja ordem
@@ -779,12 +779,12 @@ Em `matematica-exercicio.tex`, reproduza a equação que está nos slides.
 
 ## tipografia.tex
 
-Gostaria de tirar uma pausa para discutir e ilustrar alguns pontos importantes
+Gostaria de dar uma pausa para discutir e ilustrar alguns pontos importantes
 sobre tipografia. Um dos principais motivos para se usar o LaTeX é justamente
 sua qualidade tipográfica, portanto faz sentindo honrar essa arte.
 
 Robert Bringhurst diz que a tipografia “existe para honrar seu conteúdo” (p.
-23). Que ela deve ser como uma “estátua transparente”, que nos chama para o
+23). Que ela deve ser como uma “estátua transparente”, que nos atrai para o
 texto mas é imediatamente invisível, pois não chama atenção para si. Em outras
 palavras, ela é bastante sutil. Vamos nos ater a estas sutilezas por um
 momento.
