@@ -420,7 +420,7 @@ cabeçalho e do rodapé, mas não trataremos deles nesse workshop.
 
 ### Exercício
 
-Em `layout-pagina-exercicio.tex`, vamos começar a escrever um certificado de
+Em `layouts-pagina-exercicio.tex`, vamos começar a escrever um certificado de
 conclusão do workshop. No momento, não vamos nos preocupar com a posição exata
 do texto no papel. Algumas ideias de como implementar:
 
@@ -432,7 +432,7 @@ A ideia para este exercício foi tirada do livro *LaTeX Tutorials: a Primer*.
 
 ## posicao-texto.tex
 
-Se quisermos que nosso certificado fique mais parecido com o slide anterior,
+Se quisermos que nosso certificado fique mais parecido com um de verdade,
 precisamos aprender a colocar nosso texto nas regiões do papel que desejamos.
 Por padrão, as caixas de texto em LaTeX são justificadas, mas há outras opções
 comuns como textos centralizados, alinhados à esquerda ou à direita.

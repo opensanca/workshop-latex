@@ -538,10 +538,11 @@
   \frametitle{\filename{fontes.tex}}
   \Huge
   \only<1>{Fontes vêm em famílias}
-  \only<2>{\mintinline{latex}{\emph}: \emph{ênfase}}
-  \only<3>{\mintinline{latex}{\textbf}: \textbf{negrito}}
-  \only<4>{\mintinline{latex}{\textsc}: \textsc{Versaletes}}
-  \only<5>{\mintinline{latex}{\texttt}: \texttt{teletipo}}
+  \only<2>{\mintinline{latex}{\textrm}: \textrm{romanas}}
+  \only<3>{\mintinline{latex}{\emph}: \emph{ênfase}}
+  \only<4>{\mintinline{latex}{\textbf}: \textbf{negrito}}
+  \only<5>{\mintinline{latex}{\textsc}: \textsc{Versaletes}}
+  \only<6>{\mintinline{latex}{\texttt}: \texttt{teletipo}}
 \end{frame}
 
 % Tamanhos de fontes em LaTeX. Geralmente não é uma boa ideia usar eles à mão,
@@ -643,7 +644,7 @@
 \begin{frame}
   \frametitle{\filename{layouts-pagina.tex}}
   \huge
-  \only<1>{Copiar solução de \filename{fontes-exercio.tex} como
+  \only<1>{Copiar solução de \filename{fontes-exercio.tex} em
   \filename{layouts-pagina.tex}}
   \only<2>{Mudar para \code{twocolumn}, carregar o pacote \code{showframe}}
 \end{frame}
@@ -713,22 +714,20 @@
   Certificado de conclusão
 \end{frame}
 
-% Uma ideia de como ele poderia ficar
+% Uma certificado incompleto
 \begin{frame}[plain]
-  \begin{center}
-    {\huge\textbf{OpenSanca}}\\[2em]
-    {\LARGE\textsc{Certificado}}
-  \end{center}
 
-    \noindent Certificamos que Tal Pessoa da Silva participou de um curso em
-    nosso grupo no dia 28 de maio de 2016 e está qualificado para editar textos
-    em \LaTeX.
+  {\huge\textbf{OpenSanca}}\\[2em]
+  {\LARGE\textsc{Certificado}}
 
-    \vfill
-    \begin{flushright}
-      \emph{Os Organizadores}\\
-      \emph{OpenSanca}\\
-    \end{flushright}
+  \noindent Certificamos que Tal Pessoa da Silva participou de um curso em
+  nosso grupo no dia 28 de maio de 2016 e está qualificado para editar textos
+  em \LaTeX.
+
+  \vfill
+  \emph{Os Organizadores}\\
+  \emph{OpenSanca}
+
 \end{frame}
 
 % Começar nosso certificado de conclusão de curso
@@ -853,6 +852,24 @@
   \frametitle{\filename{posicao-texto.tex}}
   \Huge
   Resolver \filename{posicao-texto-exercicio.tex}
+\end{frame}
+
+% Sugestão para o visual final do certificado
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\textbf{OpenSanca}}\\[2em]
+    {\LARGE\textsc{Certificado}}
+  \end{center}
+
+    \noindent Certificamos que Tal Pessoa da Silva participou de um curso em
+    nosso grupo no dia 28 de maio de 2016 e está qualificado para editar textos
+    em \LaTeX.
+
+    \vfill
+    \begin{flushright}
+      \emph{Os Organizadores}\\
+      \emph{OpenSanca}\\
+    \end{flushright}
 \end{frame}
 
 % listas.tex %%%%%%%%%%%%%%
