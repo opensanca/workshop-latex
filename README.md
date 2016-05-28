@@ -17,7 +17,7 @@ ABNT, por exemplo.
 
 ![sancaTeX logo](img/sancatex.png)
 
-Neste workshop, que será ministrado em X de maio de 2016, discutiremos você
+Neste workshop, que será ministrado em 28 de maio de 2016, discutiremos você
 pode criar seus próprios documentos em LaTeX. Entre no [#latex no Slack do
 opensanca](https://opensanca.slack.com/messages/latex/) para mais informações e
 ajuda.
