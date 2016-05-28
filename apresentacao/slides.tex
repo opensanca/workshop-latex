@@ -8,7 +8,7 @@
 \newcommand{\filename}[1]{\texttt{#1}}
 \newcommand{\code}[1]{\texttt{#1}}
 
-\title{Olá, \LaTeX!}
+\title{Introdução ao \LaTeX: sobre ombros de gigantes}
 \author{Rafael Beraldo}
 \date{28 de maio de 2016}
 
@@ -16,7 +16,42 @@
 \maketitle
 
 \begin{frame}[standout]
-  \Huge História e filosofia vão aqui
+  \Huge História
+\end{frame}
+
+\begin{frame}[plain]
+  \begin{figure}[h]
+    \includegraphics[scale=.5]{imagens/knuth}
+    \caption{Donald Knuth em 2005}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \Huge
+  \only<1>{1977: segunda edição do segundo volume de \emph{The Art of Computer
+  Programming}}
+  \only<2>{O pai de Knuth tinha uma editora}
+  \only<3>{\textsc{ascii} não foi projetado com livros em mente}
+  \only<4>{\TeX: tau epsilon chi}
+\end{frame}
+
+\begin{frame}
+  \large
+  \begin{quote}
+    The purpose of this pronunciation exercise is to remind you that \TeX\ is
+    primarily concerned with high-quality technical manuscripts: Its emphasis
+    is on art and technology, as in the underlying Greek word. If you merely
+    want to produce a passably good document—something acceptable and basically
+    readable but not really beautiful—a simpler system will usually suffice.
+    With \TeX\ the goal is to produce the finest quality; this requires more
+    attention to detail, but you will not find it much harder to go the extra
+    distance, and you’ll be able to take special pride in the finished
+    product.\hfill (Donald Knuth, \emph{\TeX book})
+  \end{quote}
+\end{frame}
+
+\begin{frame}[standout]
+  \Huge Filosofia
 \end{frame}
 
 % Considerações iniciais
@@ -89,6 +124,13 @@
 
     \# \$ \% \^{} \& \_ \{ \} \~{} \textbackslash
   \end{minted}
+\end{frame}
+
+% Exercício: escapar os símbolos especiais até que o código compile
+\begin{frame}
+  \frametitle{\filename{simbolos-reservados.tex}}
+  \Huge
+  Resolver: \filename{simbolos-reservados.tex}
 \end{frame}
 
 % espaco-branco.tex %%%%%%%%%%%%%%
@@ -392,7 +434,7 @@
 \begin{frame}[plain]
   \hspace*{-11.5mm}
   \begin{centering}
-    \includegraphics[width=\paperwidth]{images/ascii-chart}
+    \includegraphics[width=\paperwidth]{imagens/ascii-chart}
     \par
   \end{centering}
 \end{frame}

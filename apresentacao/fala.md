@@ -10,7 +10,11 @@
 
 ## História e filosofia
 
-
+- 1977: segunda edição do segundo volume do TAoCP não agradou Knuth
+- ASCII não foi projetado para publicar livros
+- Pelos próximos 10 anos, ele trabalha no TeX
+- TeX: tau epsilon chi
+- [TeXBook](http://www.ctex.org/documents/shredder/src/texbook.pdf)
 
 ## O básico de LaTeX
 
