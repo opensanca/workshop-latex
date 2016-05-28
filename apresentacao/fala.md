@@ -745,6 +745,7 @@ O comando `\frac{numerador}{denominador}` cria frações:
 
     \frac{\frac{1}{x}+\frac{1}{y}}{y-z}
 
+
 ### Raízes
 
 O comando `\sqrt{n}` permite escrever raízes:
@@ -752,6 +753,10 @@ O comando `\sqrt{n}` permite escrever raízes:
     \sqrt{10^2} = 9
     
     \sqrt[3]{\frac{a}{b}}
+
+### Exercício
+
+Em `matematica-exercicio.tex`, reproduza a equação que está nos slides.
 
 ## Referências
 
