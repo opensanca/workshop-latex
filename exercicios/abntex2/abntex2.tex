@@ -1,0 +1,53 @@
+%
+% abntex2.tex
+%
+% Rafael Beraldo <rberaldo@cabaladada.org>
+% Workshop de LaTeX do Opensanca
+% 28 de maio de 2016
+% 
+% Demonstra:
+% - Como utilizar a classe abnTeX2 para criar uma tese
+% - Organização do texto
+% - Comandos específicos da classe
+% - O comando \input
+%
+
+\documentclass[12pt,oneside,a4paper,brazil]{abntex2}
+% Não carregaremos os pacotes polyglossia ou fontspec, pois são carregados por
+% padrão pela classe
+\usepackage{microtype,graphicx,hyperref,blindtext}
+% Pacote usado para citações:
+\usepackage[alf]{abntex2cite}
+
+
+% Informações da capa
+\titulo{}
+\autor{}
+\orientador[Orientadora: ]{}
+\data{}
+\instituicao{}
+\tipotrabalho{}
+\preambulo{}
+
+\begin{document}
+\selectlanguage{brazil}
+\frenchspacing
+
+\pretextual
+\imprimircapa
+\imprimirfolhaderosto
+
+% Para que a ToC seja incluída nas bookmarks do PDF
+\tableofcontents*
+\cleardoublepage
+
+\textual
+\cleardoublepage
+\include{introducao}
+\include{objetivos-justificativa}
+\include{referencial-teorico}
+\include{metodologia}
+
+\postextual
+\bibliography{abntex2}
+\end{document}

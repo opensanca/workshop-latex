@@ -1,5 +1,5 @@
 \documentclass[final]{beamer}
-\usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo,enumerate,mathtools}
+\usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo,enumerate,mathtools,hologo}
 \usepackage[brazil]{babel}
 
 \usetheme[sectionpage=simple,numbering=none]{metropolis}
@@ -1451,6 +1451,123 @@
   \frametitle{\filename{tipografia.tex}}
   \Huge
   Use macros para textos mais semânticos
+\end{frame}
+
+% abntex2.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  \filename{abntex2.tex}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{abntex2.tex}}
+  \large
+  \begin{quote}
+    O abnTeX2, evolução do abnTeX (ABsurd Norms for TeX), é uma suíte para
+    LaTeX que atende os requisitos das normas da ABNT (Associação Brasileira de
+    Normas Técnicas) para elaboração de documentos técnicos e científicos
+    brasileiros, como artigos científicos, relatórios técnicos, trabalhos
+    acadêmicos como teses, dissertações, projetos de pesquisa e outros
+    documentos do gênero.
+  \end{quote}
+\end{frame}
+
+% O abnTeX2 implementa muitos novos comandos, que veremos na prática.
+\begin{frame}
+  \frametitle{\filename{abntex2.tex}}
+  \Huge
+  Implementa novos comandos
+\end{frame}
+
+% Alguns exemplos de comandos que o abnTeX2 traz
+\begin{frame}
+  \frametitle{\filename{abntex2.tex}}
+  \Huge
+  \begin{itemize}
+    \item\mintinline{latex}{\titulo}
+    \item\mintinline{latex}{\autor}
+    \item\mintinline{latex}{\imprimircapa}
+    \item\mintinline{latex}{citacao} (ambiente)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{abntex2.tex}}
+  \Huge
+  A norma regulamenta a organização dos textos
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{abntex2.tex}}
+  \Huge
+  Manual do abnTeX2: \url{abntex.net.br}
+\end{frame}
+
+% Vejamos um exemplo de documento. Vamos fazer um live coding!
+\begin{frame}
+  \frametitle{\filename{abntex2.tex}}
+  \Huge
+  Exemplo: \filename{abntex2.tex}
+\end{frame}
+
+% abntex2-example.bib %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  \filename{abntex2-example.bib}
+\end{frame}
+
+% O BibTeX tem dois arquivos principais
+\begin{frame}
+  \frametitle{\filename{abntex2-example.bib}}
+  \Huge
+  \hologo{BibTeX}: database (\code{bib}) e estilo (\code{bst})
+\end{frame}
+
+% Um exemplo de entrada bibliográfica
+\begin{frame}[fragile]
+  \frametitle{\filename{abntex2-example.bib}}
+  \Huge
+  \code{bib}:
+
+  \begin{minted}[autogobble,fontsize=\large,breaklines]{latex}
+    @article{greenwade93,
+      author  = "George D. Greenwade",
+      title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
+      year    = "1993",
+      journal = "TUGBoat",
+      volume  = "14",
+      number  = "3",
+      pages   = "342--351"
+    }
+  \end{minted}
+\end{frame}
+
+% No local desejado, colocamos a bibliografia
+\begin{frame}[fragile]
+  \frametitle{\filename{abntex2-example.bib}}
+  \LARGE
+  \verb+\bibliography{arquivo}+
+\end{frame}
+
+% Para citar, basta usar um desses comandos
+\begin{frame}[fragile]
+  \frametitle{\filename{abntex2-example.bib}}
+  \LARGE
+  \verb+\cite[p.~20]{greenwade93}+
+
+  \verb+\citeonline[p.~20]{greenwade93}+
+\end{frame}
+
+% Mais um live coding!
+\begin{frame}
+  \frametitle{\filename{abntex2-example.bib}}
+  \Huge
+  Exemplo: \filename{abntex2-example.bib}
+\end{frame}
+
+\begin{frame}[standout]
+  \Huge
+  Obrigado!
 \end{frame}
 
 \end{document}
