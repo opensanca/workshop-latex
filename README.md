@@ -73,3 +73,5 @@ mais informações.
 - [The Beauty of LaTeX](http://nitens.org/taraborelli/latex) — showcase do poder do LaTeX.
 - [TeXdoc Online](http://texdoc.net/) — encontre documentação facilmente. O
   site é separado por tópicos.
+- [LaTeX 2e Cheat Sheet](https://wch.github.io/latexsheet/latexsheet-a4.pdf)
+- [A quick guide to LaTeX](http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf)
