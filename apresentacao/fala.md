@@ -669,7 +669,7 @@ corretamente.  Nesses casos, podemos usar o comando `latexmk --lualatex`.
 
 ### Exercício:
 
-Copiar a solução do exercício anterior para `figuras-exercicio.tex`. Adicionar
+Copiar a solução do exercício anterior para `imagens-exercicio.tex`. Adicionar
 uma imagem de sua escolha para ilustrar os resultados do questionário. Algumas
 ideias são: uma foto do pôster do filme, uma capa de livro, ou foto do
 entrevistado!
