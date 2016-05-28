@@ -1,0 +1,71 @@
+%
+% tipografia.tex
+%
+% Rafael Beraldo <rberaldo@cabaladada.org>
+% Workshop de LaTeX do Opensanca
+% 28 de maio de 2016
+%
+% Demonstra:
+% - Diferença entre traços horizontais como o travessão e o hífen
+% - Como usar aspas corretamente
+% - Reticências versus pontos finais
+% - Espaços duros
+% - Textos multilínguas
+% - Macros
+%
+
+\documentclass[a4paper,oneside]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+  \setotherlanguage{english}
+\usepackage{microtype}
+
+% Definindo um novo comando
+\newcommand{\filename}[1]{\texttt{#1}}
+
+\begin{document}
+\frenchspacing
+
+\section{Tipografia}
+
+Travessões --- os traços horizontais mais longos que vivem no meio de sentenças
+--- são muito diferentes das meias-riscas e hifens, por exemplo. Meias-riscas
+são utilizadas para juntar dois extremos, como as páginas 20--45 e a viagem de
+São Carlos--São Paulo. Não se esqueça de levar o guarda-chuva quando for à
+terra da garoa.
+
+Aspas também merecem nossa "atenção". A ironia vem de usar aspas como estas, ao
+invés de usar as aspas “corretas”. Também é possível fazê-las ``assim''.
+
+Reticências podem vir do mundo Unicode… Ou de um comando do \LaTeX\ldots\ Mas
+nunca de três pontos finais juntos...
+
+Finalmente, é importante lembrar que:
+
+\begin{quote}
+  Não se esqueça de adicionar espaços duros quando falar da página 10, da
+  Sra. Joana e do Dom João, também.
+\end{quote}
+
+\begin{quote}
+  Não se esqueça de adicionar espaços duros quando falar da página~10, da
+  Sra.~Joana e do Dom~João, também.
+\end{quote}
+
+Bem melhor, agora.
+
+\section{Textos multilínguas}
+
+Hoje é~\today, mas em inglês é \textenglish{\today}.
+
+A hifenização de um trecho longo em língua estrangeira ficaria toda errada sem
+uma ajuda do polyglossia. Basta usar o ambiente \verb+english+, ou qualquer que
+seja o nome da língua.
+
+\section{Macros}
+
+Finalmente, é possível criar macros no \LaTeX. Assim, fica mais fácil se
+referir ao arquivo \filename{slides.tex}.
+
+\end{document}

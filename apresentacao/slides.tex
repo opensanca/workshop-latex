@@ -1298,4 +1298,159 @@
   \end{equation}
 \end{frame}
 
+% tipografia.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  \filename{tipografia.tex}
+\end{frame}
+
+% Um dos principais motivos para se usar o LaTeX é justamente sua qualidade
+% tipográfica.
+\begin{frame}
+  \frametitle{\filename{tipografia.tex}}
+  \Huge
+  \begin{quote}
+    A tipografia que tem algo a dizer aspira a ser uma espécie de estátua
+    transparente.\hfill(Robert Bringhurst)
+  \end{quote}
+\end{frame}
+
+% Pontuação: quatro traços diferentes
+\begin{frame}
+  \frametitle{\filename{tipografia.tex}}
+  \Huge
+  \begin{itemize}
+    \item O travessão: —
+    \item A meia-risca: –
+    \item O hífen: -
+    \item O sinal de menos: \( - \)
+  \end{itemize}
+\end{frame}
+
+% O travessão
+\begin{frame}[fragile]
+  \frametitle{\filename{tipografia.tex}}
+  \LARGE
+  Travessão: —
+
+  \mintinline{latex}{--- Como assim? --- Ela disse.}
+
+  --- Como assim? --- Ela disse.
+\end{frame}
+
+% A meia-risca
+\begin{frame}[fragile]
+  \frametitle{\filename{tipografia.tex}}
+  \LARGE
+  Meia-risca: – 
+
+  \mintinline{latex}{páginas 10--15}
+
+  páginas 10--15
+\end{frame}
+
+% O hífen
+\begin{frame}[fragile]
+  \frametitle{\filename{tipografia.tex}}
+  \LARGE
+  Hífen: -
+
+  \mintinline{latex}{guarda-chuva}
+
+  guarda-chuva
+\end{frame}
+
+% Sinal de menos
+\begin{frame}[fragile]
+  \frametitle{\filename{tipografia.tex}}
+  \LARGE
+  Sinal de menos: \( - \)
+
+  \mintinline{latex}{\( 15 - 15 \)}
+
+  \( 15 - 15 \)
+\end{frame}
+
+% Aspas: diferença entre aspas retas e curvas
+\begin{frame}
+  \frametitle{\filename{tipografia.tex}}
+  \huge
+  \begin{itemize}
+    \item Aspas retas: "Olá, mundo".
+    \item Aspas curvas: “Olá, mundo".
+  \end{itemize}
+\end{frame}
+
+% Sintaxe: `` e '' ou “”
+\begin{frame}[fragile]
+  \frametitle{\filename{tipografia.tex}}
+  \Huge
+  \mintinline{latex}{``Olá, mundo''.}
+  \mintinline{latex}{“Olá, mundo”.}
+
+  ``Olá, mundo''.\\
+  “Olá, mundo”.
+\end{frame}
+
+% Reticências
+\begin{frame}[fragile]
+  \frametitle{\filename{tipografia.tex}}
+  \Huge
+  \mintinline{latex}{Olá, mundo\ldots}
+
+  Olá, mundo\ldots
+\end{frame}
+
+% Espaços duros
+\begin{frame}[fragile]
+  \frametitle{\filename{tipografia.tex}}
+  \LARGE
+  Espaços duros: \verb+~+\\
+
+  % Sem espaços duros
+  \only<1>{
+    \begin{center}
+      \fbox{
+        \begin{minipage}{.5\textwidth}
+          O Sr. Roberto disser que a Sra. Eduarda quer 100 páginas até o dia 5.
+          Às 9 eu só havia terminado 60!
+        \end{minipage}
+      }
+    \end{center}
+  }
+
+  % Com espaços duros
+  \only<2>{
+    \begin{center}
+      \fbox{
+        \begin{minipage}{.5\textwidth}
+          O Sr.~Roberto disser que a Sra.~Eduarda quer~100 páginas até o dia~5.
+          Às~9 eu só havia terminado~60!
+        \end{minipage}
+      }
+    \end{center}
+  }
+\end{frame}
+
+% A classe memoir vem com várias melhorias por padrão.
+\begin{frame}
+  \frametitle{\filename{tipografia.tex}}
+  \Huge
+  Recomendação: a classe \code{memoir}
+\end{frame}
+
+% Textos bilíngues
+\begin{frame}
+  \frametitle{\filename{tipografia.tex}}
+  \Huge
+  Textos com várias línguas são possíveis
+\end{frame}
+
+% Macros
+\begin{frame}
+  \frametitle{\filename{tipografia.tex}}
+  \Huge
+  Use macros para textos mais semânticos
+\end{frame}
+
 \end{document}

@@ -774,6 +774,84 @@ O comando `\sqrt{n}` permite escrever raízes:
 
 Em `matematica-exercicio.tex`, reproduza a equação que está nos slides.
 
+## tipografia.tex
+
+Gostaria de tirar uma pausa para discutir e ilustrar alguns pontos importantes
+sobre tipografia. Um dos principais motivos para se usar o LaTeX é justamente
+sua qualidade tipográfica, portanto faz sentindo honrar essa arte.
+
+Robert Bringhurst diz que a tipografia “existe para honrar seu conteúdo” (p.
+23). Que ela deve ser como uma “estátua transparente”, que nos chama para o
+texto mas é imediatamente invisível, pois não chama atenção para si. Em outras
+palavras, ela é bastante sutil. Vamos nos ater a estas sutilezas por um
+momento.
+
+### Pontução
+
+É importante entender a distinção entre quatro símbolos similares, mas que têm
+funções muito diferentes. São eles:
+
+- O travessão (—)
+- A meia-risca (–)
+- O hífen (-)
+- O sinal de menos (−)
+
+O travessão é utilizado para iniciar diálogos e separar frases diferentes. No
+LaTeX, é acessível com o comando `---`. A meia-risca liga valores extremos de
+uma série, como 1–10, A–Z e a Ponte Rio–Niterói. Pode ser escrita como `--` no
+LaTeX. Já o hífen, que é o sinal que temos no teclado, conecta palavras como
+guarda-chuva.
+
+Também devemos conhecer os símbolos corretos para fazer as aspas. Em LaTeX,
+podemos usar aspas “Unicode” ou o comando ```` para começar as aspas e `''`
+para terminar.
+
+Finalmente, reticências não são três pontos finais. Em LaTeX, podemos usar o
+comando `\ldots` ou colocar reticências Unicode: …
+
+### Espaços duros
+
+Em LaTeX, podemos usar o til `~` para criar um espaço inquebrável entre duas
+palavras. Isso é extremamente útil em casos como estes:
+
+- `20~mil pessoas`
+- `Sr.~Mário`
+- `página~10`
+
+### A classe `memoir`
+
+Quem se interessou por essas dicas, dê uma olhada na classe
+[`memoir`](https://www.ctan.org/pkg/memoir). Ela foi criada com essas questões
+tipográficas em mente e vem com uma série de melhorias em relação às classes
+padrão.
+
+### Dica: textos e palavras em outras línguas
+
+O pacote `polyglossia`, como o nome sugere, suporta várias línguas ao mesmo tempo por meio do comando `\setotherlanguages`. Por exemplo:
+
+    …
+    \usepackage{polyglossia}
+    \setmainlanguage{brazil}
+    \setotherlanguages{english}
+    …
+    \textenglish{This is a sentence in English, and it'll be hyphenized in the
+    correct way!}
+
+O `polyglossia` também disponibiliza um ambiente com o nome da língua:
+
+    \begin{english}
+    My long text.
+    \end{english}
+
+### Dica: crie macros semânticas
+
+É possível criar macros com o LaTeX. Vejamos um exemplo bem simples:
+
+    \newcommand{\filename}[1]{\texttt{#1}}
+
+Assim, ao invés de usar o comando `\texttt` para se referir ao nome de um
+arquivo, podemos usar o comando `\filename`, que é muito mais intuitivo.
+
 ## Referências
 
 - [Post no reddit sobre a tipografia do TAoCP antes do TeX]
