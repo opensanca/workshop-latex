@@ -845,6 +845,18 @@ O `polyglossia` também disponibiliza um ambiente com o nome da língua:
 Assim, ao invés de usar o comando `\texttt` para se referir ao nome de um
 arquivo, podemos usar o comando `\filename`, que é muito mais intuitivo.
 
+### Dica: pacote `minted` para código fonte
+
+O pacote [`minted`](https://www.ctan.org/pkg/minted) permite ao autor de um
+documento incluir exemplos de código-fonte em seu arquivo. Existe um ambiente,
+`minted`:
+
+    \begin{minted}[autogobble,breaklines]{latex}
+      \section{Introdução}
+    \end{minted}
+
+E também um comando para inserção *inline*: `\mintinline`.
+
 ## abntex2.tex
 
 O [abnTeX2](http://www.abntex.net.br/) se descreve assim em seu site:
