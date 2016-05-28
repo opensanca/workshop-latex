@@ -6,15 +6,26 @@
 - Objetivos: não é ensinar todos os mínimos detalhes técnicos do LaTeX, mas
   focar em sua utilização. Ou seja, ao invés de ficar pensando em detalhes
   primeiro, vamos fazer exercícios! Também vamos aprender muita tipografia
-    nessa aventura.
+  nessa aventura.
+
+Esta apresentação ainda está em sua versão beta.
 
 ## História e filosofia
 
+- Donald Knuth nasceu em Milwaukee, Wisconsin, em 1938.
+- Seu pai tinha uma pequena editora, por isso conhecia as tradições da
+  tipografia.
+- Na Caltech, foi contratado como professor associado. Começou a escrever um
+  livro sobre compiladores, mas logo notou que o escopo da obra seria muito
+  maior. Planejou um livro de 12 capítulos que seria chamado *The Art of
+  Computer Programming*.
 - 1977: segunda edição do segundo volume do TAoCP não agradou Knuth
 - ASCII não foi projetado para publicar livros
 - Pelos próximos 10 anos, ele trabalha no TeX
 - TeX: tau epsilon chi
 - [TeXBook](http://www.ctex.org/documents/shredder/src/texbook.pdf)
+- Leslie Lamport criou uma série de macros para usar o TeX, conhecidas como
+  LaTeX.
 
 ## O básico de LaTeX
 
@@ -38,11 +49,10 @@ conhecido como preâmbulo. O preâmbulo deste documento é apenas
 `\documentclass{article}`. Perguntar o que o público acredita que este
 comandos significa.
 
-Agora, vamos compilar nosso documento. Utilizaremos o comando `lualatex`, que
-é apenas uma das maneiras de compilar um documento utilizando o LaTeX. Também
-quero demonstrar outros métodos (online, por exemplo). A escolha do `lualatex`
-é justificada porque esse é o método moderno de compilar LaTeX, uma vez que
-ele suporta fontes OpenType e Unicode.
+Agora, vamos compilar nosso documento. Utilizaremos o comando `lualatex`, que é
+apenas uma das maneiras de compilar um documento utilizando o LaTeX. Também
+quero demonstrar outros métodos (online, por exemplo). Escolhemos o `lualatex`
+por seu suporte de fontes externas e Unicode.
 
 O que acontece se eu adicionar o comando `\section{Introdução}` antes do
 texto?

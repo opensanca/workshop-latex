@@ -19,7 +19,7 @@
 \usepackage{polyglossia}
   \setdefaultlanguage{brazil}
   \setotherlanguage{english}
-\usepackage{microtype}
+\usepackage{microtype,minted}
 
 % Definindo um novo comando
 \newcommand{\filename}[1]{\texttt{#1}}
@@ -67,5 +67,18 @@ seja o nome da língua.
 
 Finalmente, é possível criar macros no \LaTeX. Assim, fica mais fácil se
 referir ao arquivo \filename{slides.tex}.
+
+\section{Código-fonte}
+
+É possível incluir código-fonte em seu arquivo usando o pacote \texttt{minted}.
+
+\begin{minted}[autogobble,breaklines]{c}
+  #include <stdio.h>
+
+  int main(void)
+  {
+    printf("Hello, world!\n");
+  }
+\end{minted}
 
 \end{document}
