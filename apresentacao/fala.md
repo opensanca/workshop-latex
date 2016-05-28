@@ -125,13 +125,13 @@ arquivo.
 Quando o exercício terminar, **mostrar o CTAN e como encontrar documentação
 para os pacotes.** Mostrar a documentação do `polyglossia` como exemplo.
 
-## artigo-exercicio.tex
+## artigo.tex
 
 Agora, vamos olhar para um documento um pouco mais complexo, mas também mais
-típico. `artigo-exemplo.tex` demonstra alguns conceitos interessantes em LaTeX.
-Vamos começar pela organização de um aquivo `.tex`. Basicamente, ele é dividido
-em um *preâmbulo* no qual estão os pacotes e opções que utilizaremos e o
-*documento em si,* que começa a partir do comando `\begin{document}`.
+típico. `artigo.tex` demonstra alguns conceitos interessantes em LaTeX.  Vamos
+começar pela organização de um aquivo `.tex`. Basicamente, ele é dividido em um
+*preâmbulo* no qual estão os pacotes e opções que utilizaremos e o *documento
+em si,* que começa a partir do comando `\begin{document}`.
 
 ### Preâmbulo: classes e suas opções
 
