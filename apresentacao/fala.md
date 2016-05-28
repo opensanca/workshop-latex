@@ -63,11 +63,27 @@ arquivo, e por que não são impressas no documento final?
 
 ### Exercício
 
-Compilar o arquivo hello-world.tex com sucesso.
+Compilar o arquivo `hello-world.tex` com sucesso.
+
+## simbolos-reservados.tex
+
+Como veremos no decorrer de nosso curso, os símbolos a seguir estão reservados
+para o uso do LaTeX:
+
+    # $ % ^ & _ { } ~ \
+
+Devemos escapá-los para que sejam impresso da maneira correta:
+
+    \# \$ \% \^{} \& \_ \{ \} \~{} \textbackslash
+
+### Exercício
+
+O arquivo `simbolos-reservados.tex` não escapa os símbolos acima. Corrija o
+problema e compile o arquivo corretamente.
 
 ## espaco-branco.tex
 
-Aqui temos dois parágrafos do começo de _O guia do mochileiro das galáxias._
+Aqui temos dois parágrafos do começo de *O guia do mochileiro das galáxias.*
 
 Mostrar o espaço em branco que existe para o público. Perguntar o que eles
 esperam que aconteça quando eu compilar o documento.
@@ -546,7 +562,7 @@ Linhas horizontais podem ser especificadas com `\hline`:
 Linhas, sejam elas horizontais ou verticais, devem ser usadas com moderação. O
 objetivo da tabela é passar informação, portanto o texto deve ser o enfoque
 central. É melhor deixar que a informação respire, do que cercá-la. Nas
-palavras do Robert Bringhurst, em _Elementos do Estilo Tipográfico:_
+palavras do Robert Bringhurst, em *Elementos do Estilo Tipográfico:*
 
 > Assim como o texto, as tabelas ficam canhestras quando abordadas de forma
 > puramente técnica. Boas soluções tipográficas não costumam surgir em resposta

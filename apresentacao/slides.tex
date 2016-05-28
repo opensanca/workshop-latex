@@ -75,10 +75,26 @@
   Erros de compilação
 \end{frame}
 
+% simbolos-reservados.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  \filename{simbolos-reservados.tex}
+\end{frame}
+
+% Os símbolos a seguir são reservados e devem ser escapados:
+\begin{frame}[fragile]
+  \frametitle{\filename{simbolos-reservados.tex}}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+    # $ % ^ & _ { } ~ \
+
+    \# \$ \% \^{} \& \_ \{ \} \~{} \textbackslash
+  \end{minted}
+\end{frame}
+
 % espaco-branco.tex %%%%%%%%%%%%%%
 % No exemplo, temos dois parágrafos do Guia do Mochileiro das Galáxias.
 \begin{frame}[standout]
-  \huge
+  \Huge
   \filename{espaco-branco.tex}
 \end{frame}
 
