@@ -33,7 +33,7 @@ ajuda.
 Levaremos os participantes do básico de LaTeX, incluindo como instalar uma
 distribuição e como compilar arquivos, até tópicos mais complexos, como notação
 técnica, pacotes populares que trazem extensões úteis, o gerenciador de
-referências bibliográficas BibTeX e o uso do pacote ABNTeX2, usado para
+referências bibliográficas BibTeX e o uso do pacote abnTeX2, usado para
 formatar teses e artigos científicos de acordo com as normas da ABNT.
 
 O público-alvo são completos iniciantes ou pessoas que ainda se sentem
