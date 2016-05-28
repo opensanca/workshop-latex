@@ -1,0 +1,89 @@
+%
+% matematica.tex
+%
+% Rafael Beraldo <rberaldo@cabaladada.org>
+% Workshop de LaTeX do Opensanca
+% 28 de maio de 2016
+%
+% Demonstra:
+% - Ambientes para inserir equações: math, displaymath e equation
+% - Como inserir símbolos, letras gregas, operadores, potências e subscritos,
+%   frações e raízes
+%
+
+\documentclass[a4paper,oneside]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+\usepackage{microtype,mathtools}
+
+\begin{document}
+\frenchspacing
+
+\section{Três ambientes para matemática}
+
+No \LaTeX, há três ambientes para acessar o modo de matemática. Eles são o
+\texttt{math}, \texttt{displaymath} e \texttt{equation}. O primeiro é do tipo
+\emph{inline} (o ambiente não cria um novo parágrafo), enquanto que os dois
+últimos são do tipo \emph{displayed} (o ambiente cria um novo parágrafo).
+É possível acessar o ambiente \texttt{math} usando o atalho \verb+\( … \)+ e o
+ambiente \texttt{displaymath} é equivalente a \verb+\[ … \]+.
+
+% Mostrar o efeito dos três ambientes discutidos acima, além dos comandos
+% \label e \tag.
+\bigskip
+Newton demostrou que a força gravitacional entre dois objetos é igual a \( F =
+G \frac{m_1 m_2}{r^2} \) em 1687, quando publicou o \emph{Principia}.
+
+\section{Símbolos}
+
+Há centenas de símbolos já implementados no LaTeX, além daqueles que você tem
+acesso no seu teclado. Aqui estamos combinando os dois tipos:
+
+\[ 2 \times 2 = 4 \]
+
+No modo de matemática, o espaçamento funciona de maneira diferente. O LaTeX
+automaticamente escolhe o espaçamento entre os símbolos, números etc. Por
+exemplo:
+
+\[ ab = ba \]
+
+\section{Letras gregas}
+
+É fácil acessar letras gregas:
+
+\[ \text{Circunferência} = 2 \pi r \]
+
+\section{Operadores}
+
+De maneira similar, muitos operadores já estão implementados: \( \log xy = \log
+x + \log y \).
+
+Uma das formas de criptografia mais antigas é conhecida como a Cifra de César:
+
+\begin{equation}
+  E_n(x) = (x + n) \bmod 26
+  \tag{Cifra de César}
+\end{equation}
+
+\section{Potências e subscritos}
+
+Potências são representadas com acentos circunflexos, \( 2^8 \). Subscritos são
+representados com underlines, \( a_b \). Como em muitos outros casos no modo de
+matemática, é possível agrupar valores usando chaves: \( 2^{32} \).
+
+\[ f(n) = 4n + n^2 \]
+
+\section{Frações}
+
+Frações podem ser usadas com o comando \verb+\frac+: \( \frac{2}{5} \). Também é possível incluir frações dentro de frações:
+
+\[ \frac{\frac{1}{x}+\frac{1}{y}}{y-z} \]
+
+\section{Raízes}
+
+Assim como no caso das frações, raízes têm um comando especial: \verb+\sqrt+.
+A proporção \( 1:\sqrt{2} \) é usada frequentemente em tipografia. Também é possível escrever raízes com expoentes diferentes:
+
+\[ \sqrt[3]{27} = 3 \]
+\end{document}

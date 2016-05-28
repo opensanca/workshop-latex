@@ -674,6 +674,85 @@ uma imagem de sua escolha para ilustrar os resultados do questionário. Algumas
 ideias são: uma foto do pôster do filme, uma capa de livro, ou foto do
 entrevistado!
 
+## matematica.tex
+
+Uma das principais vocação do LaTeX é a matemática. Até agora, temos trabalhado
+no chamado “modo de texto”. No “modo de matemática”, a maneira como o LaTeX
+compreende o que estamos digitando muda consideravelmente. Por exemplo, letras
+comuns são tratadas como variáveis.
+
+O modo de matemática vem em dois sabores: *inline* e *displayed*. O primeiro é
+útil quando queremos falar sobre várias variáveis em uma mesma linha. O segundo
+cria um novo parágrafo. Os comandos para acessar esses modos são:
+
+- Inline: `\begin{math} … \end{math}` ou `\( … \)` 
+- Displayed: `\begin{displaymath} … \end{displaymath}` ou `\[ … \]` 
+- Displayed com equações numeradas: `\begin{equation} … \end{equation}`
+
+Há uma infinidade de comandos para descrever matemática, portanto não seria
+possível ver todos eles nesse workshop. Porém, vamos explorar rapidamente os
+principais conceitos que devem deixar a vida de quem quer aprender muito mais fácil.
+
+Para uma lista relativamente completa, recomendamos o [artigo sobre LaTeX na
+Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
+
+### Símbolos
+
+Em nossos teclados, há vários símbolos usados na notação matemática. Por
+exemplo:
+
+    + - = ! / ( ) [ ] < > | ' :
+
+No modo de matemática, o LaTeX os trata da maneira correta. Para outros
+símbolos que não estão em nosso teclado, existem comandos:
+
+    2 \times 2 = 4
+
+### Letras gregas
+
+Há comandos fáceis de lembrar para acessar letras gregas:
+
+    \alpha, \beta, \pi
+
+### Operadores
+
+Funções trigonométricas, logaritmos e exponenciais, limites, módulo etc. são
+alguns dos operadores que já estão definidos por padrão.
+
+    \cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+
+    \log xy = \log x + \log y
+
+A Cifra de César funciona da seguinte maneira:
+
+    E_n(x) = (x + n) \bmod 26
+
+### Potências e subscritos
+
+Potências são representadas com acentos circunflexos, `2^8`. Subscritos são
+representados com underlines, `a_b`. Como em muitos outros casos no modo de
+matemática, é possível agrupar valores usando chaves `{}`: `2^{32}`.
+
+    f(n) = 4n + n^2
+
+### Frações
+
+O comando `\frac{numerador}{denominador}` cria frações:
+
+    F = G \frac{m_1 m_2}{d^2}
+
+É possível colocar frações dentro de frações:
+
+    \frac{\frac{1}{x}+\frac{1}{y}}{y-z}
+
+### Raízes
+
+O comando `\sqrt{n}` permite escrever raízes:
+
+    \sqrt{10^2} = 9
+    
+    \sqrt[3]{\frac{a}{b}}
+
 ## Referências
 
 - [Post no reddit sobre a tipografia do TAoCP antes do TeX]
