@@ -59,12 +59,84 @@ experiência diz que as IDEs abaixo são as mais populares.
 ## Windows
 
 Para computadores rodando Windows, a distribuição mais popular é o
-[MiKTeX](http://miktex.org/). O MiKTeX inclui um IDE chamado TeXworks. Para
-mais informações, veja o [manual do projeto](http://docs.miktex.org/manual/)
-(em inglês).
+[MiKTeX](http://miktex.org/). O MiKTeX inclui um IDE chamado TeXworks.
 
-Confira esse [tutorial de instalação do
-MiKTeX](https://www.youtube.com/watch?v=FNf9aAeDhB4) no YouTube.
+### Instalação e configuração do MiKTeX
+
+1. Vá até [miktex.org/download](http://miktex.org/download) e escolha a opção
+   _other downloads_ para baixar o [Basic MiKTeX 64-bit Net
+   Installer](http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.5997-x64.exe).
+
+2. Instale o MiKTeX usando as opções padrão.
+
+3. Essa instalação do MiKTeX é bastante básica. Não há suporte para a línguas
+   portuguesa, por exemplo, e vários pacotes — que são como extensões do LaTeX
+   — não estão instalados. A seguir, vamos instalar praticamente todos os
+   pacotes extras. Para isso, a partir do menu Iniciar abra _MiKTeX 2.9 →
+   Maintenance (Admin) → MiKTeX Settings (Admin)_.
+
+   ![Tela inicial do MiKTeX Settings](img/guia-instalacao/miktex-config-1.png
+   "Tela inicial do MiKTeX Settings")
+
+4. Clique na aba _Packages_. Note que várias categorias, como _Applications_ e
+   _Fonts_ estão selecionadas, mas a caixa está acinzentada. Isso significa que
+   essa categoria está apenas parcialmente instalada.
+
+   ![Aba Packages com várias categorias instaladas
+   parcialmente](img/guia-instalacao/miktex-config-2.png "Aba Packages com
+   várias categorias instaladas parcialmente")
+
+5. Selecione as categorias _Applications, BibTeX, Fonts, Formats, Language
+   Support, MiKTeX 2.9 executables, MiKTeX 2.9 packages_ e _Uncategorized_,
+   como na imagem abaixo, e clique em _OK_.
+
+   ![Quase todas as categorias foram selecionadas para
+   instalação](img/guia-instalacao/miktex-config-3.png "Quase todas as
+   categorias foram selecionadas para instalação")
+
+6. O MiKTeX irá avisar que muitos pacotes serão instalados. Clique em _Proceed_
+   para continuar.
+
+   ![Diálogo dizendo quantos pacotes serão
+   instalados](img/guia-instalacao/miktex-config-4.png "Diálogo dizendo quantos
+   pacotes serão instalados")
+
+7. O processo de instalação irá começar. A instalação pode durar algumas horas,
+   dependendo da velocidade da sua conexão. 
+
+   ![Janela com o progresso da instalação dos
+   pacotes](img/guia-instalacao/miktex-config-5.png "Janela com o progresso da
+   instalação dos pacotes")
+
+8. Quando a instalação estiver completa, abra o TeXworks, o IDE que vem por
+   padrão com a distribuição MiKTeX. No canto superior esquerdo, há um botão
+   verde que compila o documento. Ao eu lado, uma caixa para escolher o
+   programa que será usado para compilar o arquivo. Para nosso curso, usaremos
+   o LuaLaTeX, conforme destacado em vermelho na figura abaixo.
+
+   ![É necessário mudar o programa de compilação de pdfLaTeX para
+   LuaLaTeX](img/guia-instalacao/texworks.png "É necessário mudar o
+   programa de compilação de pdfLaTeX para LuaLaTeX")
+
+7. Copie o código abaixo no TeXworks e clique no botão verde para compilar.
+
+    \documentclass{article}
+    \usepackage{polyglossia,blindtext,hyperref,fontspec,microtype,graphicx,
+    enumerate,mathtools}
+    \setdefaultlanguage{brazil}
+
+    \begin{document}
+    Olá, mundo. Hoje é \today.
+    \end{document}
+
+   Um PDF deve aparecer, como na figura abaixo:
+
+   ![Documento compilado ao lado do código-fonte no
+   TeXworks](img/guia-instalacao/compilacao.png "Documento compilado ao
+   lado do código-fonte no TeXworks")
+
+Em caso de dúvidas, consulte [nosso canal no Slack do
+opensanca](https://opensanca.slack.com/archives/latex).
 
 ## OS X
 
@@ -96,8 +168,18 @@ de referral para começar com 100mb a mais em
 
 ## Testando a instalação
 
-Compile o arquivo [exercicios/hello-world.tex](exercicios/hello-world.tex)
-usando o método de sua escolha. Em caso de dúvidas, consulte [nosso canal no
-Slack do opensanca](https://opensanca.slack.com/archives/latex).
+Para testar sua instalação, compile o seguinte arquivo, que contém todos os
+pacotes que utilizaremos em nosso curso. É necessário utilizar o LuaLaTeX para
+que a compilação seja bem-sucedida.
 
-TODO: dar instruções completas de como compilar arquivos.
+    \documentclass{article}
+    \usepackage{polyglossia,blindtext,hyperref,fontspec,microtype,graphicx,
+    enumerate,mathtools}
+    \setdefaultlanguage{brazil}
+
+    \begin{document}
+    Olá, mundo. Hoje é \today.
+    \end{document}
+
+Em caso de dúvidas, consulte [nosso canal no Slack do
+opensanca](https://opensanca.slack.com/archives/latex).
