@@ -121,14 +121,16 @@ Para computadores rodando Windows, a distribuição mais popular é o
 
 7. Copie o código abaixo no TeXworks e clique no botão verde para compilar.
 
-       \documentclass{article}
-       \usepackage{polyglossia,blindtext,hyperref,fontspec,microtype,graphicx,
-       enumerate,mathtools}
-       \setdefaultlanguage{brazil}
-       
-       \begin{document}
-       Olá, mundo. Hoje é \today.
-       \end{document}
+    ```
+    \documentclass{article}
+    \usepackage{polyglossia,blindtext,hyperref,fontspec,microtype,graphicx,
+    enumerate,mathtools}
+    \setdefaultlanguage{brazil}
+
+    \begin{document}
+    Olá, mundo. Hoje é \today.
+    \end{document}
+    ```
 
    Um PDF deve aparecer, como na figura abaixo:
 
