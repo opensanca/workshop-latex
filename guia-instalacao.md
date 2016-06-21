@@ -16,7 +16,7 @@ para cada plataforma.
   - [Gentoo](#gentoo)
   - [IDEs](#ides)
 - [Windows](#windows)
-  - [Instalação e configuração do MiKTeX](#instalacao-e-configuracao-do-miktex]
+  - [Instalação e configuração do MiKTeX](#instalacao-e-configuracao-do-miktex)
 - [OS X](#os-x)
 - [Editores web](#editores-web)
 - [Testando a instalação](#testando-a-instalação)
