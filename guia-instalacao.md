@@ -65,7 +65,7 @@ Para computadores rodando Windows, a distribuição mais popular é o
 ### Instalação e configuração do MiKTeX
 
 1. Vá até [miktex.org/download](http://miktex.org/download) e escolha a opção
-   _other downloads_ para baixar o [Basic MiKTeX 64-bit Net
+   _other downloads_ para baixar o [Basic MiKTeX 64-bit
    Installer](http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.5997-x64.exe).
 
 2. Instale o MiKTeX usando as opções padrão.
