@@ -1,0 +1,83 @@
+% poliglota-exercicio.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \huge
+  \filename{poliglota-exercicio.tex}
+\end{frame}
+
+% No exemplo anterior, espaco-branco.tex, os acentos — na verdade, % diacríticos — não apareceram. Alguém saberia o motivo?
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \huge
+  Acentos não apareciam em \filename{espaco-branco.tex}
+\end{frame}
+
+% Para resolver, teremos que usar pacotes
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Solução: pacotes
+\end{frame}
+
+% Para carregar pacotes, usamos esta sintaxe
+\begin{frame}[fragile]
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+    \usepackage[opções]{pacote}
+  \end{minted}
+\end{frame}
+
+% Para resolvermos a falta de diacríticos, usaremos o pacote polyglossia
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Pacote \code{polyglossia}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  O \code{polyglossia} traz benefícios como:
+  \begin{itemize}
+    \only<1>{\item Hifenização}
+    \only<2>{\item Strings como \mintinline{latex}{\today}}
+    \only<3>{\item Convenções tipográficas localizadas}
+  \end{itemize}
+\end{frame}
+
+% Ao exercício.
+%
+% Sabemos para que serve o polyglossia. Perguntar como ele seria implementado,
+% e onde seria colocado no código.
+%
+% Também estudar a sintaxe para selecionar línguas. Explicar o motivo pelo qual
+% a opção de pacote [brazil] não é mais usada: fica difícil selecionar várias
+% línguas e suas opções.
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Como carregar o pacote \code{polyglossia}?
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+    \usepackage{polyglossia}
+    \setdefaultlanguage{brazil}
+  \end{minted}
+\end{frame}
+
+% Para encontrar ajuda, podemos ler a documentação oficial dos pacotes que
+% estamos usando. Mostrar outras opções do polyglossia, por exemplo.
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \Huge
+  Comprehensive \TeX{} Archive Network
+
+  \url{ctan.org}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\filename{poliglota-exercicio.tex}}
+  \huge
+  \url{https://www.ctan.org/pkg/polyglossia}
+\end{frame}

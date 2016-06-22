@@ -1,0 +1,54 @@
+% abntex2-example.bib %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  \filename{abntex2-example.bib}
+\end{frame}
+
+% O BibTeX tem dois arquivos principais
+\begin{frame}
+  \frametitle{\filename{abntex2-example.bib}}
+  \Huge
+  \hologo{BibTeX}: database (\code{bib}) e estilo (\code{bst})
+\end{frame}
+
+% Um exemplo de entrada bibliográfica
+\begin{frame}[fragile]
+  \frametitle{\filename{abntex2-example.bib}}
+  \Huge
+  Arquivo \code{.bib}:
+
+  \begin{minted}[autogobble,fontsize=\large,breaklines]{latex}
+    @article{greenwade93,
+      author  = "George D. Greenwade",
+      title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
+      year    = "1993",
+      journal = "TUGBoat",
+      volume  = "14",
+      number  = "3",
+      pages   = "342--351"
+    }
+  \end{minted}
+\end{frame}
+
+% No local desejado, colocamos a bibliografia
+\begin{frame}[fragile]
+  \frametitle{\filename{abntex2-example.bib}}
+  \LARGE
+  \verb+\bibliography{arquivo}+
+\end{frame}
+
+% Para citar, basta usar um desses comandos
+\begin{frame}[fragile]
+  \frametitle{\filename{abntex2-example.bib}}
+  \LARGE
+  \verb+\cite[p.~20]{greenwade93}+
+
+  \verb+\citeonline[p.~20]{greenwade93}+
+\end{frame}
+
+% Mais um live coding!
+\begin{frame}
+  \frametitle{\filename{abntex2-example.bib}}
+  \Huge
+  Exemplo: \filename{abntex2-example.bib}
+\end{frame}

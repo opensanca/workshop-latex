@@ -1,0 +1,140 @@
+% matematica.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  \filename{matematica.tex}
+\end{frame}
+
+% Até agora, estávamos no modo de texto. No modo de matemática, o modo como o
+% LaTeX interpreta o que escrever é diferente. Além disso, o modo de matemática
+% é dividido em dois tipos: inline e displayed
+\begin{frame}
+  \frametitle{\filename{matematica.tex}}
+  \Huge
+  \only<1>{Modo de texto vs.\\ modo de matemática}
+  \only<2>{Modo de matemática: \emph{inline} e \emph{displayed}}
+\end{frame}
+
+% Existem três ambientes para acessar o modo de matemática.
+\begin{frame}[fragile]
+  \frametitle{\filename{matematica.tex}}
+  \huge
+  Três ambientes:\\
+
+  \only<1>{\mintinline{latex}{math} ou \mintinline{latex}{\( … \)}}
+  \only<2>{\mintinline{latex}{displaymath} ou \mintinline{latex}{\[ … \]}}
+  \only<3>{\mintinline{latex}{equation}}
+\end{frame}
+
+% Há uma infinidade de comandos, pacotes e técnicas para aprender. Cobriremos o
+% básico.
+\begin{frame}
+  \frametitle{\filename{matematica.tex}}
+  \Huge
+  Cobriremos o básico!
+
+  \huge
+  Mais em \url{en.wikibooks.org/wiki/LaTEX/Mathematics}
+\end{frame}
+
+% Símbolos em modo matemático
+\begin{frame}[fragile]
+  \frametitle{\filename{matematica.tex}}
+  \huge
+  \mintinline{latex}{2 \times 2 = 4}
+
+  \[ 2 \times 2 = 4 \]
+\end{frame}
+
+% Letras gregas
+\begin{frame}[fragile]
+  \frametitle{\filename{matematica.tex}}
+  \huge
+  \mintinline{latex}{\alpha, \beta, \pi}
+
+  \[ \alpha, \beta, \pi \]
+\end{frame}
+
+% Operadores
+\begin{frame}[fragile]
+  \frametitle{\filename{matematica.tex}}
+  \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+    \cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+  \end{minted}
+
+  \huge
+  \[ \cos (2\theta) = \cos^2 \theta - \sin^2 \theta \]
+\end{frame}
+
+% Potências e subscritos
+\begin{frame}[fragile]
+  \frametitle{\filename{matematica.tex}}
+  \Large
+
+  \begin{minipage}{.65\textwidth}
+    \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+      2^8
+      a_b
+      2^{32}
+      f(n) = 4n + n^2
+    \end{minted}
+  \end{minipage}
+  \begin{minipage}{.25\textwidth}
+    \[ 2^8 \]
+
+    \[ a_b \]
+
+    \[ 2^{32} \]
+
+    \[ f(n) = 4n + n^2 \]
+  \end{minipage}
+\end{frame}
+
+% Frações
+\begin{frame}[fragile]
+  \frametitle{\filename{matematica.tex}}
+  \Large
+  \begin{minted}[autogobble,fontsize=\large,breaklines]{latex}
+    F = G \frac{m_1 m_2}{d^2}
+    \frac{\frac{1}{x}+\frac{1}{y}}{y-z}
+  \end{minted}
+
+  \[ F = G \frac{m_1 m_2}{d^2} \]
+
+  \[ \frac{\frac{1}{x}+\frac{1}{y}}{y-z} \]
+\end{frame}
+
+% Raízes
+\begin{frame}[fragile]
+  \frametitle{\filename{matematica.tex}}
+  \Large
+  \begin{minipage}{.55\textwidth}
+    \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+      \sqrt{10^2} = 10
+      \sqrt[3]{\frac{a}{b}}
+    \end{minted}
+  \end{minipage}
+  \begin{minipage}{.35\textwidth}
+    \[ \sqrt{10^2} = 9 \]
+
+    \[ \sqrt[3]{\frac{a}{b}} \]
+  \end{minipage}
+\end{frame}
+
+% Estudar mais exemplos de matemática
+\begin{frame}
+  \frametitle{\filename{matematica.tex}}
+  \Huge
+  Estudar \filename{matematica.tex}
+\end{frame}
+
+% Exercício: reproduza essa equação em matematica-exercicio.tex
+\begin{frame}
+  \frametitle{\filename{matematica.tex}}
+  \Large
+  Reproduza em \filename{matematica-exercicio.tex}:
+
+  \huge
+  \begin{equation}
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  \end{equation}
+\end{frame}

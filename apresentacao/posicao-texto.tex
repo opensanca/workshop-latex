@@ -1,0 +1,134 @@
+% posicao-texto.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+   \filename{posicao-texto.tex}
+\end{frame}
+
+% Nosso certificado pode ter ficado legal, mas poderia ser melhor ainda se
+% ajustarmos o texto em relação à página.
+\begin{frame}
+  \frametitle{\filename{posicao-texto.tex}}
+  \Huge
+  Problemas com o certificado?
+\end{frame}
+
+% Antes de controlar a posição do texto, temos que entender o que é um
+% ambiente.
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \Huge
+  Ambientes:
+
+  \begin{minted}[autogobble,fontsize=\Huge,breaklines]{latex}
+    \begin{ambiente}
+      …
+    \end{ambiente}
+  \end{minted}
+\end{frame}
+
+% Três ambientes para controlar posição.
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \Large
+  Ambientes \code{center}, \code{flushleft} e \code{flushright}
+
+  % Código:
+  \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+    \begin{center}
+      Este texto será centralizado.
+    \end{center}
+  \end{minted}
+
+  % Resultado:
+  \begin{center}
+    Este texto será centralizado.
+  \end{center}
+\end{frame}
+
+% Ainda podemos controlar o espaço dentro de uma linha.
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \Huge
+  \mintinline{latex}{\hspace{comprimento}}
+\end{frame}
+
+% Por exemplo, um espaço de 1,5cm:
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \LARGE
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+    Essa frase\hspace{1.5cm} está esticada.
+  \end{minted}
+  \vspace{1em}
+
+  Essa frase\hspace{1.5cm} está esticada.
+\end{frame}
+
+% O LaTeX aceita uma série de unidades
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \LARGE
+  Unidades que o \LaTeX{} conhece:
+
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item\code{mm}
+      \item\code{cm}
+      \item\code{in}
+      \item\code{pt}
+      \item\code{em}
+      \item\code{ex}
+      \item\mintinline{latex}{\textheight}
+      \item\mintinline{latex}{\textwidth}
+      \item\mintinline{latex}{\pageheight}
+      \item\mintinline{latex}{\pageheight}
+    \end{itemize}
+  \end{multicols}
+\end{frame}
+
+% O comando \hfill preenche todo o espaço disponível
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \LARGE
+  \mintinline{latex}{Começo\hfill meio\hfill fim}
+  \vspace{1em}
+
+  Começo\hfill meio\hfill fim
+\end{frame}
+
+% E, finalmente, existem os comandos \vspace e \hfill
+\begin{frame}[fragile]
+  \frametitle{\filename{posicao-texto.tex}}
+  \huge
+  Comandos análogos:
+
+  \mintinline{latex}{\vspace{comprimento}}
+  \vspace{1em}
+
+  \mintinline{latex}{\vfill}
+\end{frame}
+
+% Exercício: terminar o certificado que começamos antes
+\begin{frame}
+  \frametitle{\filename{posicao-texto.tex}}
+  \Huge
+  Resolver \filename{posicao-texto-exercicio.tex}
+\end{frame}
+
+% Sugestão para o visual final do certificado
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\textbf{OpenSanca}}\\[2em]
+    {\LARGE\textsc{Certificado}}
+  \end{center}
+
+    \noindent Certificamos que Tal Pessoa da Silva participou de um curso em
+    nosso grupo no dia 28 de maio de 2016 e está qualificado para editar textos
+    em \LaTeX.
+
+    \vfill
+    \begin{flushright}
+      \emph{Os Organizadores}\\
+      \emph{OpenSanca}\\
+    \end{flushright}
+\end{frame}

@@ -1,0 +1,103 @@
+% layouts-pagina.tex %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+   \filename{layouts-pagina.tex}
+\end{frame}
+
+% Vamos mudar a opção de classe de onecolumn para twocolumn e carregar o pacote
+% showframe.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  \only<1>{Copiar solução de \filename{fontes-exercio.tex} em
+  \filename{layouts-pagina.tex}}
+  \only<2>{Mudar para \code{twocolumn}, carregar o pacote \code{showframe}}
+\end{frame}
+
+% Na folha A4, apenas uma coluna coluna de texto é difícil de ler com margens
+% curtas. Mas usar margens grandes desperdiça papel.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  \code{onecolumn}: margens grandes demais
+
+  \code{twocolumn}: nem sempre podemos
+\end{frame}
+
+% Soluções para o problema do tamanho da coluna de texto vs margens
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  Soluções:
+  \begin{itemize}
+    \only<1>{\item Colunas}
+    \only<2>{\item \code{fullpage}}
+    \only<3>{\item \code{fullpage} e entrelinhas maiores}
+  \end{itemize}
+\end{frame}
+
+% Se decidirmos usar o pacote fullpage, é uma boa ideia aumentar o espaçamento
+% entre as linhas.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  Pacote \code{setspace}:
+
+  \begin{itemize}
+    \item \code{\textbackslash singlespacing}
+    \item \code{\textbackslash onehalfspacing}
+    \item \code{\textbackslash doublespacing}
+  \end{itemize}
+\end{frame}
+
+% Outro fator que influencia o layout da página é seu estilo. Estes são os três
+% comandos básicos e estilos que podemos escolher.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  \code{\textbackslash pagestyle} e \code{\textbackslash thispagestyle}
+
+  \begin{itemize}
+    \item \code{empty}
+    \item \code{plain}
+    \item \code{headings}
+  \end{itemize}
+\end{frame}
+
+% Outro fator que influencia o layout da página é seu estilo. Estes são os três
+% comandos básicos e estilos que podemos escolher.
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \huge
+  Demonstração em \filename{layouts-pagina.tex}
+\end{frame}
+
+% Exercício: faremos um certificado de conclusão do curso
+\begin{frame}
+  \frametitle{\filename{layouts-pagina-exercicio.tex}}
+  \Huge
+  Certificado de conclusão
+\end{frame}
+
+% Uma certificado incompleto
+\begin{frame}[plain]
+
+  {\huge\textbf{OpenSanca}}\\[2em]
+  {\LARGE\textsc{Certificado}}
+
+  \noindent Certificamos que Tal Pessoa da Silva participou de um curso em
+  nosso grupo no dia 28 de maio de 2016 e está qualificado para editar textos
+  em \LaTeX.
+
+  \vfill
+  \emph{Os Organizadores}\\
+  \emph{OpenSanca}
+
+\end{frame}
+
+% Começar nosso certificado de conclusão de curso
+\begin{frame}
+  \frametitle{\filename{layouts-pagina.tex}}
+  \Huge
+  Resolver \filename{layouts-pagina-exercicio.tex}
+\end{frame}
