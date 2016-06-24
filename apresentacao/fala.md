@@ -1,4 +1,4 @@
-# Introdução ao LaTeX: sobre ombros de gigantes
+# Introdução ao LaTeX
 
 - Quem eu sou
 - Conteúdo do curso
@@ -94,12 +94,12 @@ esperam que aconteça quando eu compilar o documento.
 Múltiplos espaços em branco no LaTeX são ignorados: apenas um espaço em branco
 é colocado entre as palavras. Assim, é difícil errar e acabar com espaçamento
 a mais. Essa é apenas uma das milhares de maneiras nas quais o LaTeX é
-inteligente. 
+inteligente.
 
 Para criar um novo parágrafo, devemos deixar um espaço em branco entre as
 linhas. Novas linhas são ignoradas: para inserir uma linha, `\newline` ou `\\`.
 
-### Exercício 
+### Exercício
 
 `espaco-branco-exercicio.tex`. Arrumar o arquivo, deixando os
 espaços e parágrafos corretos.
@@ -231,7 +231,7 @@ mais tarde. Aqui vai uma lista de arquivos auxiliares:
 https://en.wikibooks.org/wiki/LaTeX/Basics#Ancillary_files
 
 Para evitar que tantos arquivos sejam mantidos, podemos utilizar o comando
-`latexmk -c`. 
+`latexmk -c`.
 
 ### Exercício
 
@@ -360,7 +360,7 @@ fontes. Antigamente, era necessário carregar um pacote que implementasse a
 fonte desejada em MetaFont. Hoje, é possível usar arquivos `ttf` e `otf`.
 
 Para selecionar uma fonte instalada no sistema nos diretórios padrões, basta
-usar o comando: 
+usar o comando:
 
     \setmainfont{Linux Libertine}
 
@@ -596,7 +596,7 @@ uma abstração conhecida como *float*.
 Em LaTeX, os dois ambiente do tipo float mais comuns são `table` e `figure`:
 
     \begin{table}[posição]
-      … 
+      …
     \end{table}
 
 As posições possíveis são:
@@ -704,8 +704,8 @@ O modo de matemática vem em dois sabores: *inline* e *displayed*. O primeiro é
 útil quando queremos falar sobre várias variáveis em uma mesma linha. O segundo
 cria um novo parágrafo. Os comandos para acessar esses modos são:
 
-- Inline: `\begin{math} … \end{math}` ou `\( … \)` 
-- Displayed: `\begin{displaymath} … \end{displaymath}` ou `\[ … \]` 
+- Inline: `\begin{math} … \end{math}` ou `\( … \)`
+- Displayed: `\begin{displaymath} … \end{displaymath}` ou `\[ … \]`
 - Displayed com equações numeradas: `\begin{equation} … \end{equation}`
 
 Há uma infinidade de comandos para descrever matemática, portanto não seria
@@ -770,7 +770,7 @@ O comando `\frac{numerador}{denominador}` cria frações:
 O comando `\sqrt{n}` permite escrever raízes:
 
     \sqrt{10^2} = 9
-    
+
     \sqrt[3]{\frac{a}{b}}
 
 ### Exercício
