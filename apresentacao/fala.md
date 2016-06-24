@@ -203,15 +203,6 @@ fazer? **Mudar o conteúdo do comando `\author` para o seguinte:**
 
 O que será impresso agora?
 
-Agora, vamos adicionar o pacote `microtype` e ver quais diferenças encontramos.
-Explicar que o `microtype` mexe nos espaços entre as palavras, lida com a
-protusão de caracteres perto da margem direita, bem como cuida da expansão de
-fontes.
-
-**Mostrar [o manual do
-`microtype`](http://mirrors.ctan.org/macros/latex/contrib/microtype/microtype.pdf),
-que tem exemplos de suas funcionalidades.**
-
 ### O documento em si
 
 No corpo do documento, entre `\begin{document}` e `\end{document}` existem
@@ -788,6 +779,15 @@ Robert Bringhurst diz que a tipografia “existe para honrar seu conteúdo” (p
 texto mas é imediatamente invisível, pois não chama atenção para si. Em outras
 palavras, ela é bastante sutil. Vamos nos ater a estas sutilezas por um
 momento.
+
+### Pacote `microtype`
+
+O pacote `microtype` mexe nos espaços entre as palavras, lida com a protusão de
+caracteres perto da margem direita, bem como cuida da expansão de fontes.
+
+**Mostrar [o manual do
+`microtype`](http://mirrors.ctan.org/macros/latex/contrib/microtype/microtype.pdf),
+que tem exemplos de suas funcionalidades.**
 
 ### Pontução
 
