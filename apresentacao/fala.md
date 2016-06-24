@@ -86,15 +86,15 @@ problema e compile o arquivo corretamente.
 
 ## espaco-branco.tex
 
-Aqui temos dois parágrafos do começo de *O guia do mochileiro das galáxias.*
+No arquivo `espaco-branco.tex` temos dois parágrafos do começo de *O guia do
+mochileiro das galáxias.*
 
 Mostrar o espaço em branco que existe para o público. Perguntar o que eles
 esperam que aconteça quando eu compilar o documento.
 
 Múltiplos espaços em branco no LaTeX são ignorados: apenas um espaço em branco
 é colocado entre as palavras. Assim, é difícil errar e acabar com espaçamento
-a mais. Essa é apenas uma das milhares de maneiras nas quais o LaTeX é
-inteligente.
+a mais.
 
 Para criar um novo parágrafo, devemos deixar um espaço em branco entre as
 linhas. Novas linhas são ignoradas: para inserir uma linha, `\newline` ou `\\`.
