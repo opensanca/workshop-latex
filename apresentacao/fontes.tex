@@ -33,47 +33,11 @@
   \verb+Eur\'{i}pides+: Eur\'{i}pides
 \end{frame}
 
-% Essa abordagem tinha vários problemas.
-\begin{frame}
-  \frametitle{\filename{fontes.tex}}
-  \huge
-  Problemas da \code{OT1}:
-
-  \begin{itemize}
-    \only<1>{\item Palavras acentuadas não hifenizavam}
-    \only<2>{\item Não era possível buscar por palavras acentuadas, muito menos
-    copiá-las}
-    \only<3>{\item E outros sistemas de escrita?}
-  \end{itemize}
-\end{frame}
-
-% O problema começou a ser resolvido (para nós, falantes de português) mais de
-% dez anos após o lançamento do LaTeX
-\begin{frame}
-  \frametitle{\filename{fontes.tex}}
-  \huge
-  1990 em Cork, Irlanda: nasce o \code{T1}, com 256 glifos
-\end{frame}
-
-% Quando comecei a usar LaTeX, aprendi a usar os seguintes pacotes e opções.
-% Hoje, vamos aprender uma maneira melhor de fazer isso.
-\begin{frame}[fragile]
-  \frametitle{\filename{fontes.tex}}
-  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
-    \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
-  \end{minted}
-\end{frame}
-
-% Vamos falar sobre a diferença entre Unicode e os algorítimos de codificação
+% Hoje não temos que nos preocupar com codificação, inserção de acentos etc.
 \begin{frame}
   \frametitle{\filename{fontes.tex}}
   \Huge
-  \only<1>{Chega o Unicode!}
-  \only<2>{Hoje com 120\,000 caracteres}
-  \only<3>{Não é uma codificação, mas como uma tabela}
-  \only<4>{UTF-8, UTF-16 e UTF-32 fazem o trabalho sujo}
-  \only<5>{Hoje em \LaTeX, temos a codificação de fonte \code{TU}}
+  Hoje em \LaTeX, temos a codificação de fonte \code{TU}
 \end{frame}
 
 % O pacote fontspec é carregado automaticamente pelo polyglossia, mas

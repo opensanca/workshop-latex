@@ -3,25 +3,14 @@
 %
 % Rafael Beraldo <rberaldo@cabaladada.org>
 % Workshop de LaTeX do Opensanca
-% 28 de maio de 2016
-% 
+%
 % Demonstra:
-% - Codificação de fontes e de input: OT1, T1 e TU
-% - Demonstrar os efeitos usar essas codificações, inclusive para copiar textos
 % - Inserção de diacríticos antes e hoje
 % - Tamanhos e estilos de fonte
 % - Como selecionar outras fontes
 %
 
 \documentclass[11pt,a4paper,oneside]{article}
-% Codificação padrão do LaTeX, conhecida como OT1 (Old Text 1):
-% \usepackage[OT1]{fontenc}
-%
-% Codificação mais recente, T1 (Text 1), com suporte para muitas línguas
-% europeias. Podemos inserir caracteres em Unicode:
-% \usepackage[T1]{fontenc}
-% \usepackage[utf8]{inputenc}
-%
 % O pacote fontspec usa a codificação TU (TeX Unicode) por padrão:
 \usepackage{fontspec}
 % Selecionar fontes:
@@ -30,7 +19,6 @@
 % Selecionar a língua:
 \usepackage{polyglossia}
   \setdefaultlanguage{brazil}
-\usepackage{microtype}
 
 \title{Fontes no \LaTeX}
 \author{Rafael Beraldo}
