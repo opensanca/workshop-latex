@@ -3,7 +3,6 @@
 %
 % Rafael Beraldo <rberaldo@cabaladada.org>
 % Workshop de LaTeX do Opensanca
-% 28 de maio de 2016
 %
 % Demonstra:
 % - O ambiente tabular
@@ -12,6 +11,7 @@
 % - O pacote booktabs
 % - Células com várias colunas usando \multicolumn
 % - O pacote longtable
+% - Floats e o ambiente table
 %
 
 \documentclass[a4paper,oneside]{article}
@@ -46,10 +46,10 @@ genérica:
 \begin{center}
   \begin{tabular}{lr}
     Ingrediente & Quantidade\\[5pt]
-    Trigo & 3 xíc\\
-    Sal & 2 cc\\
+    Trigo    & 3 xíc\\
+    Sal      & 2 cc\\
     Fermento & 2 cc\\
-    Água & 1 $^1/_7$ xíc
+    Água     & 1 $^1/_7$ xíc
   \end{tabular}
 \end{center}
 
@@ -114,37 +114,38 @@ chegar à estrela mais próxima. Abaixo, uma lista de destinos para quem dispõe
 de tempo livre.
 
 % Estamos demonstrando dois conceitos aqui: como poderíamos usar um \midrule
-% depois de multicolumn e, é claro, multicolumn. Podemos aproveitar para
-% deixá-la mais longa e aprender o pacote longtable e o comando \endhead.
+% depois de multicolumn e, é claro, multicolumn. Vamos aproveitar para
+% deixá-la mais longa e carregar o pacote longtable. O comando \endhead é útil
+% para definir um cabeçalho que se repete em toda página.
 \begin{center}
   \begin{tabular}{lr}
     \multicolumn{2}{c}{Estrelas na Via Láctea}\\[8pt]
-    Estrela          & Distância (anos-luz)\\[5pt]
-    Proxima Centauri & 4,2\\
-    Rigil Kentaurus  & 4,3\\
-    Alpha Cen B      & 4,3\\
-    Barnard's Star   & 6,0\\
-    Wolf 359         & 7,7\\
-    BD +36 2147      & 8,2\\
-    Luyten 726-8A    & 8,4\\
-    Luyten 726-8B    & 8,4\\
-    Sirius A         & 8,6\\
-    Sirius B         & 8,6\\
-    Ross 154         & 9,4\\
-    Ross 248         & 10,4\\
-    Epsilon Eri      & 10,8\\
-    Ross 128         & 10,9\\
-    61 Cyg A         & 11,1\\
-    61 Cyg B         & 11,1\\
-    Epsilon Ind      & 11,2\\
-    BD +43 44 A      & 11,2\\
-    BD +43 44 B      & 11,2\\
-    Luyten 789-6     & 11,2\\
-    Procyon A        & 11,4\\
-    Procyon B        & 11,4\\
-    BD +59 1915 A    & 11,6\\
-    BD +59 1915 B    & 11,6\\
-    CoD -36 15693    & 11,7
+    Estrela            & Distância (anos-luz)\\[5pt]
+    Proxima Centauri   & 4,2\\
+    Rigil Kentaurus    & 4,3\\
+    Alpha Cen B        & 4,3\\
+    Estrela de Barnard & 6,0\\
+    Wolf 359           & 7,7\\
+    BD +36 2147        & 8,2\\
+    Luyten 726-8A      & 8,4\\
+    Luyten 726-8B      & 8,4\\
+    Sirius A           & 8,6\\
+    Sirius B           & 8,6\\
+    Ross 154           & 9,4\\
+    Ross 248           & 10,4\\
+    Epsilon Eri        & 10,8\\
+    Ross 128           & 10,9\\
+    61 Cyg A           & 11,1\\
+    61 Cyg B           & 11,1\\
+    Epsilon Ind        & 11,2\\
+    BD +43 44 A        & 11,2\\
+    BD +43 44 B        & 11,2\\
+    Luyten 789-6       & 11,2\\
+    Procyon A          & 11,4\\
+    Procyon B          & 11,4\\
+    BD +59 1915 A      & 11,6\\
+    BD +59 1915 B      & 11,6\\
+    CoD -36 15693      & 11,7
   \end{tabular}
 \end{center}
 \end{document}
