@@ -769,6 +769,61 @@ O comando `\sqrt{n}` permite escrever raízes:
 
 Em `matematica-exercicio.tex`, reproduza a equação que está nos slides.
 
+## abntex2.tex
+
+A descrição oficial do [abnTeX2](http://www.abntex.net.br/) segue abaixo:
+
+> O abnTeX2, evolução do abnTeX (ABsurd Norms for TeX), é uma suíte para LaTeX
+> que atende os requisitos das normas da ABNT (Associação Brasileira de Normas
+> Técnicas) para elaboração de documentos técnicos e científicos brasileiros,
+> como artigos científicos, relatórios técnicos, trabalhos acadêmicos como
+> teses, dissertações, projetos de pesquisa e outros documentos do gênero.
+>
+> A suíte abnTeX2 é composta por uma classe, por pacotes de citação e de
+> formatação de estilos bibliográficos, por exemplos, modelos de documentos e
+> por uma ampla documentação.
+
+Para utilizar o abnTeX2, devemos utilizar a classe `abntex2`:
+`\documentclass{abntex2}`. A classe implementa uma série de comandos novos:
+
+- `\titulo`
+- `\autor`
+- `\orientador`
+- `\instituicao`
+- `\imprimircapa`
+- `citacao` (ambiente)
+
+Entre outros. Não faremos um exercício de abnTeX2, portanto vamos explorar
+juntos a anatomia de uma monografia ficcional. Ver o
+[manual](http://repositorios.cpai.unb.br/ctan/macros/latex/contrib/abntex2/doc/abntex2.pdf)
+para mais informações sobre a organização do arquivo.
+
+## abntex2-example.bib
+
+O que não eu teria dado por esse tipo de ajuda na época! Mais uma seção de live
+coding nos aguarda. Desta vez, aprenderemos a criar uma bibliografia.
+Bibliografias em LaTeX não são tão complicadas quanto parecem. A ideia é a
+seguinte: em seu diretório, há um arquivo `bib` que contém uma entrada
+bibliográfica. Por exemplo:
+
+    @article{greenwade93,
+      author  = "George D. Greenwade",
+      title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
+      year    = "1993",
+      journal = "TUGBoat",
+      volume  = "14",
+      number  = "3",
+      pages   = "342--351"
+    }
+
+No arquivo principal, no local em que desejamos incluir a bibliografia, usamos
+o comando `\bibliography{arquivo}`. No decorrer do texto, podemos utilizar os
+comandos `\cite[p.~20]{greenwade93}` e `\citeonline` para fazer referência à
+entrada bibliográfica desejada. Um arquivo `bst` fica responsável pelo estilo
+correto da citação e da bibliografia.
+
+Mão na massa!
+
 ## tipografia.tex
 
 Gostaria de dar uma pausa para discutir e ilustrar alguns pontos importantes
@@ -867,61 +922,6 @@ documento incluir exemplos de código-fonte em seu arquivo. Existe um ambiente,
     \end{minted}
 
 E também um comando para inserção *inline*: `\mintinline`.
-
-## abntex2.tex
-
-O [abnTeX2](http://www.abntex.net.br/) se descreve assim em seu site:
-
-> O abnTeX2, evolução do abnTeX (ABsurd Norms for TeX), é uma suíte para LaTeX
-> que atende os requisitos das normas da ABNT (Associação Brasileira de Normas
-> Técnicas) para elaboração de documentos técnicos e científicos brasileiros,
-> como artigos científicos, relatórios técnicos, trabalhos acadêmicos como
-> teses, dissertações, projetos de pesquisa e outros documentos do gênero.
->
-> A suíte abnTeX2 é composta por uma classe, por pacotes de citação e de
-> formatação de estilos bibliográficos, por exemplos, modelos de documentos e
-> por uma ampla documentação.
-
-Para utilizar o abnTeX2, devemos utilizar a classe `abntex2`:
-`\documentclass{abntex2}`. A classe implementa uma série de comandos novos:
-
-- `\titulo`
-- `\autor`
-- `\orientador`
-- `\instituicao`
-- `\imprimircapa`
-- `citacao` (ambiente)
-
-Entre outros. Não faremos um exercício de abnTeX2, portanto vamos explorar
-juntos a anatomia de uma monografia ficcional. Ver o
-[manual](http://repositorios.cpai.unb.br/ctan/macros/latex/contrib/abntex2/doc/abntex2.pdf)
-para mais informações sobre a organização do arquivo.
-
-## abntex2-example.bib
-
-O que não eu teria dado por esse tipo de ajuda na época! Mais uma seção de live
-coding nos aguarda. Desta vez, aprenderemos a criar uma bibliografia.
-Bibliografias em LaTeX não são tão complicadas quanto parecem. A ideia é a
-seguinte: em seu diretório, há um arquivo `bib` que contém uma entrada
-bibliográfica. Por exemplo:
-
-    @article{greenwade93,
-      author  = "George D. Greenwade",
-      title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
-      year    = "1993",
-      journal = "TUGBoat",
-      volume  = "14",
-      number  = "3",
-      pages   = "342--351"
-    }
-
-No arquivo principal, no local em que desejamos incluir a bibliografia, usamos
-o comando `\bibliography{arquivo}`. No decorrer do texto, podemos utilizar os
-comandos `\cite[p.~20]{greenwade93}` e `\citeonline` para fazer referência à
-entrada bibliográfica desejada. Um arquivo `bst` fica responsável pelo estilo
-correto da citação e da bibliografia.
-
-Mão na massa!
 
 ## Referências
 

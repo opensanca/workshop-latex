@@ -3,8 +3,7 @@
 %
 % Rafael Beraldo <rberaldo@cabaladada.org>
 % Workshop de LaTeX do Opensanca
-% 28 de maio de 2016
-% 
+%
 % Demonstra:
 % - Como utilizar a classe abnTeX2 para criar uma tese
 % - Organização do texto
@@ -13,9 +12,9 @@
 %
 
 \documentclass[12pt,oneside,a4paper,brazil]{abntex2}
-% Não carregaremos os pacotes polyglossia ou fontspec, pois são carregados por
-% padrão pela classe
-\usepackage{microtype,graphicx,hyperref,blindtext}
+% Não carregaremos os pacotes polyglossia, pois é carregado por padrão pela
+% classe
+\usepackage{microtype,graphicx,hyperref,blindtext,fontspec}
 % Pacote usado para citações:
 \usepackage[alf]{abntex2cite}
 
@@ -27,7 +26,6 @@
 \data{}
 \instituicao{}
 \tipotrabalho{}
-\preambulo{}
 
 \begin{document}
 \selectlanguage{brazil}
@@ -45,9 +43,10 @@
 \cleardoublepage
 \include{introducao}
 \include{objetivos-justificativa}
-\include{referencial-teorico}
 \include{metodologia}
+\include{desenvolvimento}
+\include{conclusao}
 
 \postextual
-\bibliography{abntex2}
+\bibliography{abntex2-exemplo}
 \end{document}
