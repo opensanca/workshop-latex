@@ -671,11 +671,12 @@ ao `table`:
 
 Demonstraremos esses conceitos no arquivo `imagens.tex`. Vamos aprender a
 colocar duas imagens lado-a-lado com o ambiente `minipage`. É importante
-mencionar que, muitas vezes, é necessário rodar o comando `lualatex` para que o
-documento compile corretamente. Como vimos anteriormente, documentos são
-compilados em apenas uma passada, geralmente gerando arquivos como `aux`, `log`
-etc. Eles precisam ser lidos para que referências e bibliografias apareçam
-corretamente.  Nesses casos, podemos usar o comando `latexmk --lualatex`.
+mencionar que, em alguns casos, é necessário rodar o comando `lualatex` mais de
+uma vez para que o documento compile corretamente. Como vimos anteriormente,
+documentos são compilados em apenas uma passada, geralmente gerando arquivos
+como `aux`, `log` etc. Eles precisam ser lidos para que referências e
+bibliografias apareçam corretamente.  Nesses casos, podemos usar o comando
+`latexmk --lualatex`.
 
 ### Exercício:
 
@@ -760,7 +761,7 @@ O comando `\frac{numerador}{denominador}` cria frações:
 
 O comando `\sqrt{n}` permite escrever raízes:
 
-    \sqrt{10^2} = 9
+    \sqrt{10^2} = 10
 
     \sqrt[3]{\frac{a}{b}}
 
