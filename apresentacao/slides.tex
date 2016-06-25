@@ -2,7 +2,7 @@
 \usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo,enumerate,mathtools,hologo}
 \usepackage[brazil]{babel}
 
-\usetheme[sectionpage=simple,numbering=none]{metropolis}
+\usetheme[sectionpage=none,numbering=none]{metropolis}
 \beamertemplatenavigationsymbolsempty
 
 \newcommand{\filename}[1]{\texttt{#1}}
@@ -17,7 +17,7 @@
 
 \begin{document}
 \maketitle
-% TODO: add kind of table of contents
+\input{conteudo.tex}
 \input{historia.tex}
 \input{filosofia.tex}
 \input{hello-world.tex}
@@ -30,11 +30,11 @@
 \input{posicao-texto.tex}
 \input{listas.tex}
 \input{citacoes-versos.tex}
+\input{abntex2.tex}
+\input{bibtex.tex}
 \input{tabelas.tex}
 \input{imagens.tex}
 \input{matematica.tex}
-\input{abntex2.tex}
-\input{bibtex.tex}
 \input{tipografia.tex}
 \input{obrigado.tex}
 \end{document}
