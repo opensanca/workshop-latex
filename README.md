@@ -17,11 +17,15 @@ ABNT, por exemplo.
 
 ![sancaTeX logo](img/sancatex.png)
 
-A primeira versão deste workshop foi apresentada em 28 de maio de 2016, com
-outras edições por vir!
-
 Para bater um papo sobre LaTeX ou pedir ajuda, entre no canal [#latex no Slack
 do opensanca](https://opensanca.slack.com/messages/latex/).
+
+## Apresentações
+
+Este workshop foi realizado em:
+
+- [28 de maio de 2016](https://www.meetup.com/pt-BR/opensanca/events/230102377/), no opensanca
+- [25 de junho de 2016](https://www.meetup.com/pt-BR/opensanca/events/231664154/), no opensanca
 
 ## Sumário
 
