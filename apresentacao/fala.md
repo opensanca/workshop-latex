@@ -104,7 +104,7 @@ linhas. Novas linhas são ignoradas: para inserir uma linha, `\newline` ou `\\`.
 `espaco-branco-exercicio.tex`. Arrumar o arquivo, deixando os
 espaços e parágrafos corretos.
 
-Notar que nem tudo funcionará perfeitamente. Qual problemas encontramos? Sim,
+Notar que nem tudo funcionará perfeitamente. Quais problemas encontramos? Sim,
 os diacríticos não apareceram corretamente. Alguém saberia o motivo?
 
 ## poliglota-exercicio.tex
