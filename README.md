@@ -54,6 +54,8 @@ mais informações.
 
 ## Recursos
 
+- [A beginner's guide to
+  LaTeX](http://mirrors.ctan.org/info/beginlatex/beginlatex-3.6.pdf)
 - [The Not So Short Introduction to
   LaTeX2e](https://tobi.oetiker.ch/lshort/lshort.pdf) — um dos melhores guias
   para iniciantes em LaTeX.
