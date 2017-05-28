@@ -925,12 +925,12 @@ E também um comando para inserção *inline*: `\mintinline`.
 
 ## Referências
 
-- [Post no reddit sobre a tipografia do TAoCP antes do TeX]
-  (https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
+- [Post no reddit sobre a tipografia do TAoCP antes do
+  TeX](https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
 - [Guia do Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
 - [História da codificação de
   fontes](http://www.lasca.ic.unicamp.br/pub/ctan/macros/latex/doc/encguide.pdf)
 - [LaTeX Tutorials: a
   Primer](https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)
-- Elementos do Estilo Tipográfico versão 3.0, por Robert Bringhurst. Cosac
+- _Elementos do Estilo Tipográfico versão 3.0_, por Robert Bringhurst. Cosac
   Naify, 2008.
